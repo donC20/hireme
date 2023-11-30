@@ -1,25 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import NavBar from './components/navbar';
+function MyApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <LandingImage />
+    </>
   );
 }
 
-export default App;
+// landing image section
+function LandingImage() {
+  return (
+    <>
+      <div className="container">
+        <div className="row d-flex justify-content-center align-items-center">
+          <div className="col-lg-6 order-lg-1">
+            {/* Empty column to create space on the left */}
+            <div className='landing-side-paragraph'>
+              <p>Search</p>
+              <p>Find</p>
+              <p>Apply</p>
+            </div>
+          </div>
+          <div className="col-lg-6 order-lg-2">
+            <div className="home-poster">
+              <div className='landing-image-container'>
+                <img className='landing-image' src="images/bussinessman.png" alt="bussinessman" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </>
+  );
+}
+
+export default MyApp;

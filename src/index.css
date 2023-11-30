@@ -1,13 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Lobster&family=Poppins:wght@300&family=Vina+Sans&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* navbar */
+
+.navbar {
+  background-color: transparent;
 }
+
+.navbar-nav li a {
+  color: white;
+}
+
+.nav-item .active {
+  color: rgb(161, 255, 20) !important;
+  font-weight: 500;
+}
+
+/* Brand name */
+.navbar-brand {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 25px;
+  font-family: 'Lobster', sans-serif;
+}
+
+/* nav bar sign | login buttons */
+
+.login-btn,
+.signup-btn {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+}
+
+.login-btn:active,
+.signup-btn:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.login-btn:hover .svgIcon,
+.signup-btn:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
+
+
+/* nav bar ends */
+
+/* home image section */
+#home-landing {
+  background-image: linear-gradient(45deg, #203450 13%, #5990B3 90%);
+  width: 100%;
+  height: 100vh !important;
+}
+
+.landing-image{
+  width: 100%;
+}
+
+/* landing paragraph */
+.landing-side-paragraph p {
+  line-height: 100px;
+  font-size: 150px;
+  color: white;
+  text-align: start;
+  font-weight: 900;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* home image section ends */

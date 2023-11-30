@@ -1,7 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
 import NavBar from './components/navbar';
-function MyApp() {
+import SearchBar from './components/searchbar';
+function LandingSection() {
   return (
     <>
       <NavBar />
@@ -19,9 +18,12 @@ function LandingImage() {
           <div className="col-lg-6 order-lg-1">
             {/* Empty column to create space on the left */}
             <div className='landing-side-paragraph'>
-              <p>Search</p>
-              <p>Find</p>
-              <p>Apply</p>
+              <span>Find</span>
+              <br />
+              <b>Apply &</b>
+              <br />
+              <span>Get hired</span>
+              <SearchBar />
             </div>
           </div>
           <div className="col-lg-6 order-lg-2">
@@ -38,4 +40,8 @@ function LandingImage() {
   );
 }
 
-export default MyApp;
+
+
+
+
+export default LandingSection;

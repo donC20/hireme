@@ -1,0 +1,44 @@
+{
+  "companies": [
+    {
+      "name": "Apple Inc.",
+      "logo": "images/apple.png"
+    },
+    {
+      "name": "Google LLC",
+      "logo": "images/google.png"
+    },
+    {
+      "name": "Microsoft Corporation",
+      "logo": "images/microsoft.png"
+    },
+    {
+      "name": "Amazon.com, Inc.",
+      "logo": "images/amazon.png"
+    },
+    {
+      "name": "Facebook, Inc.",
+      "logo": "images/meta.png"
+    },
+    {
+      "name": "Tesla, Inc.",
+      "logo": "images/tesla.png"
+    },
+    {
+      "name": "Netflix, Inc.",
+      "logo": "images/netflix.png"
+    },
+    {
+      "name": "Samsung Electronics Co., Ltd.",
+      "logo": "images/samsung.png"
+    },
+    {
+      "name": "Nike, Inc.",
+      "logo": "images/nike.png"
+    },
+    {
+      "name": "Toyota Motor Corporation",
+      "logo": "images/toyota.png"
+    }
+  ]
+}

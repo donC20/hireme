@@ -16,11 +16,11 @@ function NavBar() {
                             </li>
                             {/* <li className="nav-item">
                                 <a href="#" className="nav-link" >Graduate</a>
-                            </li>
+                            </li> */}
                            
                             <li className="nav-item">
-                                <a href="#" className="nav-link" aria-disabled="true">Professional</a>
-                            </li> */}
+                                <a href="#" className="nav-link" aria-disabled="true">Jobs</a>
+                            </li>
                             <li className="nav-item">
                                 <a href="#" className="nav-link" aria-disabled="true">Discussions</a>
                             </li>

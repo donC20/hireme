@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import companiesData from './components/json/company.json';
+import Footer from "./components/footer";
 function ContentSection() {
     return (
         <>
@@ -15,6 +16,7 @@ function ContentSection() {
                 <DescriptionThree />
                 <PricingContainer />
                 <UserMatrics />
+            <Footer/>
             </div>
         </>);
 }
@@ -185,30 +187,6 @@ function DescriptionTwo() {
     </>);
 }
 
-// user matrics
-
-function UserMatrics() {
-    return (<>
-        <div className="row mt-3 gx-4 gy-4 justify-content-around user-matrics">
-            <div className="col-6 col-6 col-lg-3 col-md-6 text-center">
-                <h1>22k+</h1>
-                <p>Jobs posted</p>
-            </div>
-            <div className="col-6 col-lg-3 col-md-6 text-center">
-                <h1>21M+</h1>
-                <p>Happy customers</p>
-            </div>
-            <div className="col-6 col-lg-3 col-md-6 text-center">
-                <h1>75L+</h1>
-                <p>Users Hired</p>
-            </div>
-            <div className="col-6 col-lg-3 col-md-6 text-center">
-                <h1>200+</h1>
-                <p>Companies</p>
-            </div>
-        </div>
-    </>);
-}
 
 // information - 3 Common
 function DescriptionThree() {
@@ -230,43 +208,106 @@ function DescriptionThree() {
 //pricing
 function PricingContainer() {
     return (<>
-        <div className="row mt-3 gx-4 gy-4 justify-content-center description-one">
-            <div className="col-6 col-lg-4 col-md-6">
-                <div className="card pricing-card">
-                    <div className="card-body">
-                        <div className="d-flex flex-column gap-2 align-items-center">
-                        <b>Basic</b>
-                        <strong>&#36; 299.00</strong>
-                        <img src="icons/basicPrice.png" alt="basicImg" />
+        <div className="price-modal mt-lg-0 mt-5">
+        <h2 className="fw-bold text-center">Choose a plan that's right for you.</h2>
+        <p className="text-center">Lorem ipsum dolor sit amet, consectetur<br/> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+            <div className="row gx-4 gy-4 justify-content-center">
+                <div className="col-12 col-lg-4 col-md-6">
+                    <div className="card pricing-card">
+                        <div className="card-body">
+                            <div className="d-flex flex-column gap-2 align-items-center">
+                                <b>Basic</b>
+                                <strong>&#36; 299.00</strong>
+                                <img src="icons/basicPrice.png" alt="basicImg" />
+                            </div>
+                            <div className="PriceTerms-list mt-4">
+                                <ul>
+                                    <li>30 job posting</li>
+                                    <li>3 featured job</li>
+                                    <li>Job displayed for 15 days</li>
+                                    <li>Premium Support 24/7</li>
+                                </ul>
+                            </div>
+                            <div className="row justify-content-center p-3 cartBtn-container">
+                                <button class="addTo-cartBtn">
+                                    <span class="btn-txt">Add to cart</span>
+                                </button>
+                            </div>
                         </div>
-                        <div className="PriceTerms-list mt-4">
-                            <ul>
-                                <li>30 job posting</li>
-                                <li>3 featured job</li>
-                                <li>Job displayed for 15 days</li>
-                                <li>Premium Support 24/7</li>
-                            </ul>
+                    </div>
+                </div>
+                <div className="col-12 col-lg-4 col-md-6">
+                    <div className="card pricing-card">
+                        <div className="card-body">
+                            <div className="d-flex flex-column gap-2 align-items-center">
+                                <b>Standard</b>
+                                <strong>&#36; 299.00</strong>
+                                <img src="icons/standardPrice.png" alt="basicImg" />
+                            </div>
+                            <div className="PriceTerms-list mt-4">
+                                <ul>
+                                    <li>30 job posting</li>
+                                    <li>3 featured job</li>
+                                    <li>Job displayed for 15 days</li>
+                                    <li>Premium Support 24/7</li>
+                                </ul>
+                            </div>
+                            <div className="row justify-content-center p-3 cartBtn-container">
+                                <button class="addTo-cartBtn">
+                                    <span class="btn-txt">Add to cart</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-12 col-lg-4 col-md-6">
+                    <div className="card pricing-card">
+                        <div className="card-body">
+                            <div className="d-flex flex-column gap-2 align-items-center">
+                                <b>Premium</b>
+                                <strong>&#36; 499.00</strong>
+                                <img src="icons/premiumPrice.png" alt="basicImg" />
+                            </div>
+                            <div className="PriceTerms-list mt-4">
+                                <ul>
+                                    <li>30 job posting</li>
+                                    <li>3 featured job</li>
+                                    <li>Job displayed for 15 days</li>
+                                    <li>Premium Support 24/7</li>
+                                </ul>
+                            </div>
+                            <div className="row justify-content-center p-3 cartBtn-container">
+                                <button class="addTo-cartBtn">
+                                    <span class="btn-txt">Add to cart</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="col-6 col-lg-4 col-md-6">
-                <div className="card pricing-card">
-                    <div className="card-body d-flex flex-column align-items-center">
-                        <b>Standard</b>
-                        <strong>&#36; 499.00</strong>
-                        <img src="icons/standardPrice.png" alt="basicImg" />
-                    </div>
-                </div>
+        </div>
+    </>);
+}
+
+// user matrics
+function UserMatrics() {
+    return (<>
+        <div className="row mt-3 gx-4 gy-4 justify-content-around user-matrics">
+            <div className="col-6 col-6 col-lg-3 col-md-6 text-center">
+                <h1>22k+</h1>
+                <p>Jobs posted</p>
             </div>
-            <div className="col-6 col-lg-4 col-md-6">
-                <div className="card pricing-card">
-                    <div className="card-body d-flex flex-column align-items-center">
-                        <b>Premium</b>
-                        <strong>&#36; 599.00</strong>
-                        <img src="icons/premiumPrice.png" alt="basicImg" />
-                    </div>
-                </div>
+            <div className="col-6 col-lg-3 col-md-6 text-center">
+                <h1>21M+</h1>
+                <p>Happy customers</p>
+            </div>
+            <div className="col-6 col-lg-3 col-md-6 text-center">
+                <h1>75L+</h1>
+                <p>Users Hired</p>
+            </div>
+            <div className="col-6 col-lg-3 col-md-6 text-center">
+                <h1>200+</h1>
+                <p>Companies</p>
             </div>
         </div>
     </>);

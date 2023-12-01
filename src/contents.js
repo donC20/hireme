@@ -8,8 +8,13 @@ function ContentSection() {
     return (
         <>
             <div className="container p-3 mt-5">
-
                 <TopRecrutersList />
+                <DescriptionOne />
+                <DemandedJobs />
+                <DescriptionTwo />
+                <DescriptionThree />
+                <PricingContainer />
+                <UserMatrics />
             </div>
         </>);
 }
@@ -43,13 +48,13 @@ function TopRecrutersList() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                 },
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 },
             },
         ],
@@ -64,7 +69,7 @@ function TopRecrutersList() {
             <Slider {...settings}>
                 {companiesData.companies.map(item => (
                     <div className="row mt-2 g-3 company-slider" key={item}>
-                        <img  src={item.logo} alt={item.name} />
+                        <img src={item.logo} alt={item.name} />
                     </div>
                 ))}
             </Slider>
@@ -73,6 +78,199 @@ function TopRecrutersList() {
     );
 }
 
+// information - 1
+function DescriptionOne() {
+    return (<>
+        <div className="row gap-lg-5 gap-1  description-one">
+            <div className="col-lg-5 col-12 mt-5">
+                <img src="images/workspace1.jpg" alt="worker image" />
+            </div>
+            <div className="col-lg-6 col-12 mt-5">
+                <h2 className="fw-bold">Millions of jobs. Find the one that suits you.</h2>
+                <p>Discover diverse job opportunities from top companies across industries. Whether you're a seasoned pro or just starting, find positions that match your skills and interests. Take the next step in your career with us.</p>
+                <div className="whatWeDo-list">
+                    <p>What we do</p>
+                    <ul>
+                        <li>Gather Employers and employees @ one place</li>
+                        <li>Provide a seamless job search experience</li>
+                        <li>Offer career resources and guidance</li>
+                        <li>Connect talented professionals with innovative companies</li>
+                    </ul>
+                </div>
+                <button class="cta">
+                    <span>Get started</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </>);
+}
+
+// demanded jobs
+const CardComp = ({ data }) => {
+    return (<>
+        <div className="col-6 col-lg-3 col-md-6">
+            <div className="card demand-card">
+                <div className="card-body p-4">
+                    <div className="icon-container mb-3 d-flex justify-content-center align-items-center">
+                        <i className={`bi bi-${data.icon}`}></i>
+                    </div>
+                    <span className="job-category">{data.category}</span>
+                    <p className="job-vacancies">{data.vacancy} vacancies</p>
+                </div>
+            </div>
+        </div>
+    </>);
+}
+
+function DemandedJobs() {
+    return (<>
+        <div className="d-flex justify-content-between align-items-center mt-5">
+            <h2 className="fw-bold">Jobs On-Demand</h2>
+            <p className="all-categories-btn">All categories</p>
+        </div>
+        <div className="row mt-3 gx-4 gy-4 justify-content-center">
+            <CardComp data={{ icon: "vector-pen", category: "Design & Development.", vacancy: "200" }} />
+            <CardComp data={{ icon: "person", category: "Customer Help & Sales.", vacancy: "250" }} />
+            <CardComp data={{ icon: "briefcase", category: "Bussiness & marketing.", vacancy: "370" }} />
+            <CardComp data={{ icon: "telephone", category: "Bussiness Development.", vacancy: "2450" }} />
+            <CardComp data={{ icon: "code-slash", category: "Programming & Code.", vacancy: "248" }} />
+            <CardComp data={{ icon: "sliders", category: "Video Edition & 3D work.", vacancy: "3450" }} />
+            <CardComp data={{ icon: "brush", category: "Art & Animation", vacancy: "2004" }} />
+            <div className="col-6 col-lg-3 col-md-6">
+                <div className="card demand-card final-card">
+                    <div className="card-body p-4 position-relative">
+                        <div>
+                            <h1>20k+</h1>
+                            <p>Jobs posted.</p>
+                        </div>
+                        <div className="icon-container-final mb-3 d-flex justify-content-center align-items-center position-absolute">
+                            <i className="bi bi-arrow-up-right-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </>);
+}
+
+// information - 2 employer
+function DescriptionTwo() {
+    return (<>
+        <div className="row gap-lg-5 gap-1  description-one">
+            <div className="col-lg-5 col-12 mt-5 order-lg-2">
+                <img src="images/employer1.jpg" alt="worker image" />
+            </div>
+            <div className="col-lg-6 col-12 mt-5 order-lg-1">
+                <h2 className="fw-bold">Unlock Your Team's Potential: Discover Exceptional Talent on Our Job Platform!</h2>
+                {/* <p>Tailored Solutions for Hiring Success: Discover a personalized approach to recruitment, ensuring you find the right fit for your team.</p> */}
+                <div className="whatWeDo-list">
+                    <ul>
+                        <li>Empower Your Business with Top Talent: Explore a diverse pool of skilled professionals ready to contribute to your success. Effortless Hiring Excellence: Navigate through our platform to find, connect, and hire the best candidates seamlessly.</li>
+                        <li>Elevate Your Team: Access a wealth of exceptional talent and build a workforce that propels your company to new heights.</li>
+                    </ul>
+                </div>
+                <button class="cta">
+                    <span>Hire now</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </>);
+}
+
+// user matrics
+
+function UserMatrics() {
+    return (<>
+        <div className="row mt-3 gx-4 gy-4 justify-content-around user-matrics">
+            <div className="col-6 col-6 col-lg-3 col-md-6 text-center">
+                <h1>22k+</h1>
+                <p>Jobs posted</p>
+            </div>
+            <div className="col-6 col-lg-3 col-md-6 text-center">
+                <h1>21M+</h1>
+                <p>Happy customers</p>
+            </div>
+            <div className="col-6 col-lg-3 col-md-6 text-center">
+                <h1>75L+</h1>
+                <p>Users Hired</p>
+            </div>
+            <div className="col-6 col-lg-3 col-md-6 text-center">
+                <h1>200+</h1>
+                <p>Companies</p>
+            </div>
+        </div>
+    </>);
+}
+
+// information - 3 Common
+function DescriptionThree() {
+    return (<>
+        <div className="row gap-lg-5 gap-1  description-one">
+            <div className="col-lg-5 col-12 mt-5">
+                <img src="images/globe_companies.png" alt="worker image" />
+            </div>
+            <div className="col-lg-6 col-12 mt-5">
+                <h2 className="fw-bold">We traverse the vast expanse of our Earth, encircling the globe in our journey.</h2>
+                <p>Embarking on a global odyssey, we weave our presence across continents, connecting hearts and souls in the rhythm of shared experiences.</p>
+
+
+            </div>
+        </div>
+    </>);
+}
+
+//pricing
+function PricingContainer() {
+    return (<>
+        <div className="row mt-3 gx-4 gy-4 justify-content-center description-one">
+            <div className="col-6 col-lg-4 col-md-6">
+                <div className="card pricing-card">
+                    <div className="card-body">
+                        <div className="d-flex flex-column gap-2 align-items-center">
+                        <b>Basic</b>
+                        <strong>&#36; 299.00</strong>
+                        <img src="icons/basicPrice.png" alt="basicImg" />
+                        </div>
+                        <div className="PriceTerms-list mt-4">
+                            <ul>
+                                <li>30 job posting</li>
+                                <li>3 featured job</li>
+                                <li>Job displayed for 15 days</li>
+                                <li>Premium Support 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="col-6 col-lg-4 col-md-6">
+                <div className="card pricing-card">
+                    <div className="card-body d-flex flex-column align-items-center">
+                        <b>Standard</b>
+                        <strong>&#36; 499.00</strong>
+                        <img src="icons/standardPrice.png" alt="basicImg" />
+                    </div>
+                </div>
+            </div>
+            <div className="col-6 col-lg-4 col-md-6">
+                <div className="card pricing-card">
+                    <div className="card-body d-flex flex-column align-items-center">
+                        <b>Premium</b>
+                        <strong>&#36; 599.00</strong>
+                        <img src="icons/premiumPrice.png" alt="basicImg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </>);
+}
 
 
 // Latest opportunities

@@ -10,6 +10,7 @@
 }
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
 }
 
@@ -395,13 +396,13 @@ body {
   }
 
   .landing-side-paragraph {
-    line-height: 6vh;
+    line-height: 10vh;
     padding-top: 5%;
   }
 
   .landing-side-paragraph span,
   .landing-side-paragraph b {
-    font-size: 10vh;
+    font-size: 15vh;
   }
 
   .description-one {

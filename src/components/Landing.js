@@ -1,5 +1,5 @@
 // landing image section
-import SearchBar from './Searchbar'
+import SearchBar from './SearchbarContainer'
 function LandingContainer() {
   return (
     <>

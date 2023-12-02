@@ -391,7 +391,7 @@ body {
 /* resposnsive layout */
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   #home-landing {
-    height: 50vh !important;
+    height: 100vh !important;
   }
 
   .landing-side-paragraph {

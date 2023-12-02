@@ -9,7 +9,7 @@ import DescriptionTwo from "./components/DescriptionTwo";
 import DescriptionThree from "./components/DescriptionThree";
 import PricingContainer from "./components/PricingContainer";
 import UserMatrics from "./components/UserMatrics";
-import Footer from "./components/Footer";
+import Footer from "components/Footer";
 function ContentSection() {
     useEffect(() => {
         EnableSmoothScroll();

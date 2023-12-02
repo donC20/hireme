@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import TopRecrutersList from "./components/Toprecruiter";
 import LandingContainer from "./components/Landing";
-import NavBar from "components/Navbar";
 import { EnableSmoothScroll } from "./hooks/utils";
 import DescriptionOne from "./components/DescriptionOne";
 import DemandedJobs from "./components/DemandJobs";
@@ -9,7 +8,8 @@ import DescriptionTwo from "./components/DescriptionTwo";
 import DescriptionThree from "./components/DescriptionThree";
 import PricingContainer from "./components/PricingContainer";
 import UserMatrics from "./components/UserMatrics";
-import Footer from "components/Footer";
+import Footer from "./components/FooterContainer";
+import NavbarContainer from "./components/NavbarContainer";
 function ContentSection() {
     useEffect(() => {
         EnableSmoothScroll();
@@ -17,7 +17,7 @@ function ContentSection() {
     return (
         <>
             <header id="home-landing">
-                <NavBar />
+                <NavbarContainer/>
                 <LandingContainer />
             </header>
             <div className="container p-3 mt-5 position-relative">

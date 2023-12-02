@@ -1,5 +1,5 @@
 import React from "react";
-function NavBar() {
+function NavbarContainer() {
     return (
         <>
             <nav className="navbar navbar-expand-lg">
@@ -49,4 +49,4 @@ function NavBar() {
     );
 }
 
-export default NavBar
+export default NavbarContainer

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import TopRecrutersList from "./components/Toprecruiter";
 import LandingContainer from "./components/Landing";
-import NavBar from "./components/Navbar";
+import NavBar from "components/Navbar";
 import { EnableSmoothScroll } from "./hooks/utils";
 import DescriptionOne from "./components/DescriptionOne";
 import DemandedJobs from "./components/DemandJobs";

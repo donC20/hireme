@@ -10,7 +10,7 @@ function NavBar() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         {/* Center items using custom styles */}
-                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0 navBar-links">
+                        <ul className="navbar-nav mx-auto mb-2 gap-lg-4 mb-lg-0 navBar-links">
                             <li className="nav-item">
                                 <a href="#" className="nav-link active" aria-current="page">Home</a>
                             </li>

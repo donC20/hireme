@@ -1,16 +1,6 @@
-import NavBar from './components/navbar';
-import SearchBar from './components/searchbar';
-function LandingSection() {
-  return (
-    <>
-      <NavBar />
-      <LandingImage />
-    </>
-  );
-}
-
 // landing image section
-function LandingImage() {
+import SearchBar from './Searchbar'
+function LandingContainer() {
   return (
     <>
       <div className="container p-3 p-lg-0">
@@ -23,7 +13,7 @@ function LandingImage() {
               <b>Apply &</b>
               <br />
               <span>Get hired</span>
-              <SearchBar />
+              <SearchBar/>
             </div>
           </div>
           <div className="col-lg-6 order-lg-2 d-none d-lg-block">
@@ -44,4 +34,4 @@ function LandingImage() {
 
 
 
-export default LandingSection;
+export default LandingContainer;

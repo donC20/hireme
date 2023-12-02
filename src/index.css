@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Hedvig+Letters+Serif:opsz@12..24&family=Jost:wght@900&family=Lobster&family=Roboto:wght@300&family=Vina+Sans&display=swap');
+
 /* root */
 :root {
   --main-text-color: #333;
   --background-color: white;
   --primary-color: rgb(161, 255, 20);
-  --icon-color:rgb(161, 255, 20);
-  --common-border:1px solid rgba(128, 128, 128, 0.373);
+  --icon-color: rgb(161, 255, 20);
+  --common-border: 1px solid rgba(128, 128, 128, 0.373);
+}
+html{
+  scroll-behavior: smooth;
+
 }
 
 body {
   /* background-color: var(--background-color); */
   background-image: url('/public/images/background1.jpg');
   font-family: 'Hedvig Letters Serif', sans-serif;
-overflow-x: hidden;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 /* home image section */
@@ -110,9 +116,9 @@ overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
+
 .description-one img {
   max-width: 100%;
   height: auto;
@@ -210,9 +216,9 @@ overflow-x: hidden;
 
 }
 
-.demand-card:hover{
- transform: scale(1.1);
- transition:0.5s ease-in-out;
+.demand-card:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
 }
 
 .icon-container {
@@ -244,8 +250,8 @@ overflow-x: hidden;
 .final-card:hover {
   background-color: var(--primary-color);
   color: white;
-  --icon-color:white;
-  --common-border:1px solid white;
+  --icon-color: white;
+  --common-border: 1px solid white;
 }
 
 .final-card p {
@@ -267,7 +273,7 @@ overflow-x: hidden;
 
 
 /* User matrics */
-.user-matrics{
+.user-matrics {
   background-color: rgba(161, 255, 20, 0.397);
   align-items: center;
   padding-top: 1.5%;
@@ -278,11 +284,12 @@ overflow-x: hidden;
 
 
 /* Pricing model */
-.price-modal{
+.price-modal {
   width: 100%;
   height: 100vh;
 }
-.pricing-card{
+
+.pricing-card {
   cursor: pointer;
   border-radius: 15px;
   border: 1px solid rgba(128, 128, 128, 0.238);
@@ -290,15 +297,16 @@ overflow-x: hidden;
 
 }
 
-.pricing-card img{
+.pricing-card img {
   width: 64px;
   height: 64px;
 }
-.pricing-card strong{
+
+.pricing-card strong {
   color: var(--icon-color);
- font-size: 35px;
- font-weight: 900;
- font-family: 'Jost', sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  font-family: 'Jost', sans-serif;
 }
 
 .PriceTerms-list li {
@@ -309,30 +317,33 @@ overflow-x: hidden;
 
 .PriceTerms-list li {
   line-height: 30px;
-  list-style-type: none; 
+  list-style-type: none;
   padding-inline-start: 2ch;
 }
 
 .PriceTerms-list li::before {
-  content: '\2713'; 
-  color: var(--icon-color); /* Set your desired color (e.g., red) */
+  content: '\2713';
+  color: var(--icon-color);
+  /* Set your desired color (e.g., red) */
   display: inline-block;
-  width: 1.5em; /* Adjust as needed for spacing */
-  margin-left: -1em; /* Negative margin to overlap with padding */
+  width: 1.5em;
+  /* Adjust as needed for spacing */
+  margin-left: -1em;
+  /* Negative margin to overlap with padding */
 }
 
-.pricing-card:hover{
+.pricing-card:hover {
   background-color: var(--primary-color);
   border: var(--primary-color);
   color: white;
-  --icon-color:white;
+  --icon-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* add to cart button */
 
-.addTo-cartBtn{
-  background-color:var(--icon-color);
+.addTo-cartBtn {
+  background-color: var(--icon-color);
   border: 1px solid outset var(--primary-color);
   font-size: 14px;
   padding: 3.5%;
@@ -340,11 +351,37 @@ overflow-x: hidden;
   transition: 0.5s ease-in-out;
 }
 
-.addTo-cartBtn:hover{
-  background-color:black;
+.addTo-cartBtn:hover {
+  background-color: black;
   color: white;
 }
 
+
+/*  */
+
+/* fab */
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF; /* Adjust color as needed */
+  color: #fff;
+  font-size: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.fab:hover {
+  background-color: #0056b3; /* Adjust hover color as needed */
+}
 
 /*  */
 
@@ -366,12 +403,13 @@ overflow-x: hidden;
   .landing-side-paragraph b {
     font-size: 10vh;
   }
+
   .description-one {
     display: block;
-    width: auto;
-    height: auto;
+    min-height: auto;
   }
-  .price-modal{
+
+  .price-modal {
     width: auto;
     height: auto;
   }

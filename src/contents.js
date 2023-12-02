@@ -16,8 +16,8 @@ function ContentSection() {
                 <DescriptionThree />
                 <PricingContainer />
                 <UserMatrics />
-            <Footer/>
             </div>
+            <Footer/>
         </>);
 }
 

@@ -1,18 +1,38 @@
 // landing image section
 import SearchBar from './SearchbarContainer'
+import { motion } from "framer-motion"
+
 function LandingContainer() {
   return (
     <>
-      <div className="container p-3 p-lg-0">
+      <div className="container p-3 p-lg-0" id='landing-contianer'>
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-lg-6 order-lg-1">
             {/* Empty column to create space on the left */}
             <div className='landing-side-paragraph'>
-              <span>Find</span>
+              <motion.span
+               initial={{ opacity: 0, x: "100%"  }}
+               whileInView={{ opacity: 1, x: 0 }}
+               transition={{
+                   ease: "linear",
+                   duration: 0.5,
+                   y: { duration: 1 },
+                   delay:0
+               }}
+              >Find</motion.span>
               <br />
-              <b>Apply &</b>
+              <motion.b
+              initial={{ opacity: 0, x: "100%"  }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                  ease: "linear",
+                  duration: 0.5,
+                  y: { duration: 1 },
+                  delay:0
+              }}
+              >Apply &</motion.b>
               <br />
-              <span>Get hired</span>
+              <motion.span>Get hired</motion.span>
               <SearchBar/>
             </div>
           </div>

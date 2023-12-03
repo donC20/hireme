@@ -1,14 +1,31 @@
 import React from 'react'
+import { motion } from "framer-motion"
 
 // information - 2 employer
 function DescriptionTwo() {
     return (<>
         <section className="sec-3">
             <div className="row gap-lg-5 gap-1  description-one">
-                <div className="col-lg-5 col-12 mt-5 order-lg-2">
+                <motion.div className="col-lg-5 col-12 mt-5 order-lg-2"
+                    initial={{ opacity: 0, x: "100%" }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                        ease: "linear",
+                        duration: 2,
+                        x: { duration: 1 }
+                    }}
+                >
                     <img src="images/employer1.jpg" alt="worker image" />
-                </div>
-                <div className="col-lg-6 col-12 mt-5 order-lg-1">
+                </motion.div>
+                <motion.div className="col-lg-6 col-12 mt-5 order-lg-1"
+                initial={{ opacity: 0, x: "-100%" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                    ease: "linear",
+                    duration: 2,
+                    x: { duration: 1 }
+                }}
+                >
                     <h2 className="fw-bold">Unlock Your Team's Potential: Discover Exceptional Talent on Our Job Platform!</h2>
                     {/* <p>Tailored Solutions for Hiring Success: Discover a personalized approach to recruitment, ensuring you find the right fit for your team.</p> */}
                     <div className="whatWeDo-list">
@@ -24,7 +41,7 @@ function DescriptionTwo() {
                             <polyline points="8 1 12 5 8 9"></polyline>
                         </svg>
                     </button>
-                </div>
+                </motion.div>
             </div>
         </section>
 

@@ -11,9 +11,7 @@ import UserMatrics from "./components/UserMatrics";
 import Footer from "./components/FooterContainer";
 import NavbarContainer from "./components/NavbarContainer";
 function ContentSection() {
-    useEffect(() => {
-        EnableSmoothScroll();
-    }, [])
+    
     return (
         <>
             <header id="home-landing">

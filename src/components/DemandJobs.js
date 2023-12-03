@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { motion } from "framer-motion"
 // demanded jobs
 const CardComp = ({ data }) => {
     return (<>
-        <div className="col-6 col-lg-3 col-md-6">
+        <div className="col-6 col-lg-3 col-md-6 fade-in">
             <div className="card demand-card">
                 <div className="card-body p-4">
                     <div className="icon-container mb-3 d-flex justify-content-center align-items-center">
@@ -24,7 +24,16 @@ function DemandedJobs() {
                 <h2 className="fw-bold">Jobs On-Demand</h2>
                 <p className="all-categories-btn">All categories</p>
             </div>
-            <div className="row mt-3 gx-4 gy-4 justify-content-center">
+            <motion.div className="row mt-3 gx-4 gy-4 justify-content-center"
+                initial={{ opacity: 0, x: "-100%" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ x: 100 }}
+                transition={{
+                    ease: "linear",
+                    duration: 2,
+                    x: { duration: 1 }
+                }}
+            >
                 <CardComp data={{ icon: "vector-pen", category: "Design & Development.", vacancy: "200" }} />
                 <CardComp data={{ icon: "person", category: "Customer Help & Sales.", vacancy: "250" }} />
                 <CardComp data={{ icon: "briefcase", category: "Bussiness & marketing.", vacancy: "370" }} />
@@ -45,7 +54,7 @@ function DemandedJobs() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     </>);
 }

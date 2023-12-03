@@ -57,7 +57,7 @@ function PricingContainer() {
                         ease: "linear",
                         duration: 0.5,
                         y: { duration: 1 },
-                        delay:1
+                        delay:0.5
                     }}
                     >
                         <div className="card pricing-card">
@@ -90,7 +90,7 @@ function PricingContainer() {
                         ease: "linear",
                         duration: 0.5,
                         y: { duration: 1 },
-                        delay:2
+                        delay:1
                     }}
                     >
                         <div className="card pricing-card">

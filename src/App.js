@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import TopRecrutersList from "./components/Toprecruiter";
 import LandingContainer from "./components/Landing";
-import { EnableSmoothScroll } from "./hooks/utils";
+// import { EnableSmoothScroll, IsPageLoading } from "./hooks/utils";
 import DescriptionOne from "./components/DescriptionOne";
 import DemandedJobs from "./components/DemandJobs";
 import DescriptionTwo from "./components/DescriptionTwo";
@@ -10,25 +10,27 @@ import PricingContainer from "./components/PricingContainer";
 import UserMatrics from "./components/UserMatrics";
 import Footer from "./components/FooterContainer";
 import NavbarContainer from "./components/NavbarContainer";
+import PagePreloader from "./components/PagePreloader";
 function ContentSection() {
-    
+ 
     return (
         <>
+            {/* <PagePreloader /> */}
             <header id="home-landing">
-                <NavbarContainer/>
+                <NavbarContainer />
                 <LandingContainer />
             </header>
             <div className="container p-3 mt-5 position-relative">
-                <DescriptionOne/>
-                <DemandedJobs/>
-                <DescriptionTwo/>
-                <DescriptionThree/>
-                <PricingContainer/>
-                <UserMatrics/>
+                <DescriptionOne />
+                <DemandedJobs />
+                <DescriptionTwo />
+                <DescriptionThree />
+                <PricingContainer />
+                <UserMatrics />
                 <TopRecrutersList />
                 {/* <FabButton /> */}
             </div>
-            <Footer/>
+            <Footer />
         </>);
 }
 

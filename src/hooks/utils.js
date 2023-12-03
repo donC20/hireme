@@ -1,4 +1,17 @@
-import LandingContainer from "../components/Landing";
+
+// loading window animation 
+
+export const IsPageLoading = () => {
+    let preloader = document.getElementById('preloader-Container');
+    let html = document.getElementsByTagName('html')[0]; // Access the first element in the collection
+    console.log('page loading...');
+    document.addEventListener('DOMContentLoaded', function () {
+        html.style.overflow = 'scroll';
+        preloader.style.display = 'none';
+        console.log('page loaded!');
+    });
+};
+
 
 export const EnableSmoothScroll = () => {
     let section = document.querySelectorAll('section');

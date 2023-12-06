@@ -1,53 +1,55 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+import '../css/navbar.css'
 function NavbarContainer() {
     return (
         <>
 
             <nav className="navbar d-lg-none d-block">
                 <div className="container-fluid">
-                    <a className="navbar-brand ps-3" href="#">
+                    <Link className="navbar-brand ps-3" to="#">
                         HireMe
-                    </a>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                         <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel"> <a className="navbar-brand" href="#">
+                            <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel"> <Link className="navbar-brand" to="#">
                                 HireMe
-                            </a></h5>
+                            </Link></h5>
                             <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link active" aria-current="page">
+                                    <Link to="#" className="nav-link active" aria-current="page">
                                         Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 {/* <li className="nav-item">
-                    <a href="#" className="nav-link" >Graduate</a>
+                    <Link to="#" className="nav-link" >Graduate</Link>
                 </li> */}
 
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link" aria-disabled="true">
+                                    <Link to="jobs" className="nav-link" aria-disabled="true">
                                         Jobs
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link" aria-disabled="true">
+                                    <Link to="#" className="nav-link" aria-disabled="true">
                                         Discussions
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link" aria-disabled="true">
+                                    <Link to="#" className="nav-link" aria-disabled="true">
                                         Learn
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link" aria-disabled="true">
+                                    <Link to="#" className="nav-link" aria-disabled="true">
                                         Contact us
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                             <div className="account_section d-flex gap-1">
@@ -68,9 +70,9 @@ function NavbarContainer() {
 
             <nav className="navbar navbar-expand-lg d-none d-lg-block">
                 <div className="container-fluid">
-                    <a className="navbar-brand ps-3" href="#">
+                    <Link className="navbar-brand ps-3" to="#">
                         HireMe
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -86,33 +88,33 @@ function NavbarContainer() {
                         {/* Center items using custom styles */}
                         <ul className="navbar-nav mx-auto mb-2 gap-lg-4 mb-lg-0 navBar-links">
                             <li className="nav-item">
-                                <a href="#" className="nav-link active" aria-current="page">
+                                <Link to="#" className="nav-link active" aria-current="page">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             {/* <li className="nav-item">
-                    <a href="#" className="nav-link" >Graduate</a>
+                    <Link to="#" className="nav-link" >Graduate</Link>
                 </li> */}
 
                             <li className="nav-item">
-                                <a href="#" className="nav-link" aria-disabled="true">
+                                <Link to='jobs' className="nav-link" aria-disabled="true">
                                     Jobs
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link" aria-disabled="true">
+                                <Link to="#" className="nav-link" aria-disabled="true">
                                     Discussions
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link" aria-disabled="true">
+                                <Link to="#" className="nav-link" aria-disabled="true">
                                     Learn
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link" aria-disabled="true">
+                                <Link to="#" className="nav-link" aria-disabled="true">
                                     Contact us
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <div className="account_section d-flex gap-1">

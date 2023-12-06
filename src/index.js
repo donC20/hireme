@@ -1,15 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ContentSection from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
-import './css/navbar.css'
-import './css/searchbar.css'
-import './index.css'
-import './css/index_animate.css'
+import { createBrowserRouter, RouterProvider,} from "react-router-dom";
+import Home from './pages/Home';
+import Jobs from './pages/Jobs';
 
-// landing section
-// ReactDOM.render(<><LandingSection /></>,document.getElementById('home-landing'));
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home/>,
+    },
+    {
+        path: "/jobs",
+        element: <Jobs/>,
+    },
+]);
 
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
 // content section
-ReactDOM.render(<><ContentSection/></>,document.getElementById('root'));

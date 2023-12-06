@@ -1,4 +1,6 @@
 import React from "react";
+import '../css/searchbar.css'
+
 // search bar in the landing page
 
 function SearchBar() {

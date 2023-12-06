@@ -1,56 +1,17 @@
-import React, { useEffect } from "react";
-import TopRecrutersList from "./components/Toprecruiter";
-import LandingContainer from "./components/Landing";
-// import { EnableSmoothScroll, IsPageLoading } from "./hooks/utils";
-import DescriptionOne from "./components/DescriptionOne";
-import DemandedJobs from "./components/DemandJobs";
-import DescriptionTwo from "./components/DescriptionTwo";
-import DescriptionThree from "./components/DescriptionThree";
-import PricingContainer from "./components/PricingContainer";
-import UserMatrics from "./components/UserMatrics";
-import Footer from "./components/FooterContainer";
-import NavbarContainer from "./components/NavbarContainer";
-import PagePreloader from "./components/PagePreloader";
-function ContentSection() {
- 
-    return (
-        <>
-            {/* <PagePreloader /> */}
-            <header id="home-landing">
-                <NavbarContainer />
-                <LandingContainer />
-            </header>
-            <div className="container p-3 mt-5 position-relative">
-                <DescriptionOne />
-                <DemandedJobs />
-                <DescriptionTwo />
-                <DescriptionThree />
-                <PricingContainer />
-                <UserMatrics />
-                <TopRecrutersList />
-                {/* <FabButton /> */}
-            </div>
-            <Footer />
-        </>);
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export default ContentSection;
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+// import Jobs from "./pages/Jobs";
+// import Home from './pages/Home';
+// function App() {
+//     return (
+//         <>
+//             {/* <PagePreloader /> */}
+//             <Router>
+//                 <Routes>
+//                     <Route path="/" element={<Home/>}/>
+//                     <Route path="/jobs" element={<Jobs/>}/>
+//                 </Routes>
+//             </Router>
+//         </>);
+// }
+// export default App;

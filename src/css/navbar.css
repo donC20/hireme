@@ -3,78 +3,78 @@
 /* navbar */
 
 .navbar {
-    background-color: transparent;
+  background-color: transparent;
   font-family: 'Poppins', sans-serif;
-  }
-  
-  
-  
-  .navbar-nav li a {
-    color: white;
-  }
-  
-  .nav-item .active {
-    color: rgb(161, 255, 20) !important;
-    font-weight: 500;
-  }
-  
-  /* Brand name */
-  .navbar-brand {
-    color: rgb(255, 255, 255);
-    font-weight: 900;
-    font-size: 25px;
-    font-family: 'Lobster', sans-serif;
-  }
-  
-  /* nav bar sign | login buttons */
-  
-  .login-btn,
-  .signup-btn {
-    width: 110px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    background-color: rgb(161, 255, 20);
-    border-radius: 30px;
-    color: rgb(19, 19, 19);
-    font-weight: 600;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    transition-duration: .2s;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
-    padding-left: 8px;
-    transition-duration: .5s;
-  }
-  
-  .svgIcon {
-    height: 25px;
-    transition-duration: 1.5s;
-  }
-  
-  .bell path {
-    fill: rgb(19, 19, 19);
-  }
-  
-  .login-btn:hover,
-  .signup-btn:hover {
-    background-color: rgb(192, 255, 20);
-    transition-duration: .5s;
-  }
-  
-  .login-btn:active,
-  .signup-btn:active {
-    transform: scale(0.97);
-    transition-duration: .2s;
-  }
-  
-  .login-btn:hover .svgIcon,
-  .signup-btn:hover .svgIcon {
-    transform: rotate(250deg);
-    transition-duration: 1.5s;
-  }
-  
-  
-  /* nav bar ends */  
+}
+
+
+
+.navbar-nav li a {
+  color: white;
+}
+
+.nav-item .active {
+  color: rgb(161, 255, 20) !important;
+  font-weight: 500;
+}
+
+/* Brand name */
+.navbar-brand {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 25px;
+  font-family: 'Lobster', sans-serif;
+}
+
+/* nav bar sign | login buttons */
+
+.login-btn,
+.signup-btn {
+  width: 110px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition-duration: .5s;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+}
+
+.login-btn:active,
+.signup-btn:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.login-btn:hover .svgIcon,
+.signup-btn:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
+/* nav bar ends */

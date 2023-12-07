@@ -1,17 +1,22 @@
+import { createBrowserRouter, RouterProvider,} from "react-router-dom";
+import Home from './pages/Home/Home';
+import Jobs from "./pages/Jobs/Jobs";
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />,
+    },
+    {
+        path: "/jobs",
+        element: <Jobs />,
+    },
+]);
 
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-// import Jobs from "./pages/Jobs";
-// import Home from './pages/Home';
-// function App() {
-//     return (
-//         <>
-//             {/* <PagePreloader /> */}
-//             <Router>
-//                 <Routes>
-//                     <Route path="/" element={<Home/>}/>
-//                     <Route path="/jobs" element={<Jobs/>}/>
-//                 </Routes>
-//             </Router>
-//         </>);
-// }
-// export default App;
+function App() {
+    return (
+        <>
+            <RouterProvider router={router} />
+
+        </>);
+}
+export default App;

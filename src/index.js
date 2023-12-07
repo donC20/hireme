@@ -1,25 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
-import { createBrowserRouter, RouterProvider,} from "react-router-dom";
-import Home from './pages/Home';
-import Jobs from './pages/Jobs';
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Home/>,
-    },
-    {
-        path: "/jobs",
-        element: <Jobs/>,
-    },
-]);
+import './index.css'
+import App from './App';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <App/>
     </React.StrictMode>
   );
 // content section

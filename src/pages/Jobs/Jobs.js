@@ -1,12 +1,12 @@
 import React from 'react'
-import NavbarContainer from "../../components/NavbarContainer";
 
 import '../Jobs/css/jobs.css'
 import Footer from '../../components/FooterContainer';
+import Navbarcommon from '../../components/Navbarcommon';
 function Jobs() {
   return (
     <div className='jobBody'>
-      <NavbarContainer />
+      <Navbarcommon/>
       <Footer />
     </div>
   )

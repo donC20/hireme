@@ -2,24 +2,24 @@
 
 /* navbar */
 
-.navbar {
+.navHome {
   background-color: transparent;
   font-family: 'Poppins', sans-serif;
 }
 
 
 
-.navbar-nav li a {
+.navHomeNav li a {
   color: white;
 }
 
-.nav-item .active {
+.navHomeItem .active {
   color: rgb(161, 255, 20) !important;
   font-weight: 500;
 }
-
+/*  */
 /* Brand name */
-.navbar-brand {
+.navHomebrand,.canvasBrand {
   color: rgb(255, 255, 255);
   font-weight: 900;
   font-size: 25px;

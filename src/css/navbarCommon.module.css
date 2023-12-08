@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Lobster&family=Poppins:wght@300&family=Vina+Sans&display=swap');
+
+/* root */
+:root {
+    --main-text-color: #333;
+    --background-color: white;
+    --primary-color: rgb(161, 255, 20);
+    --secondary-color: #5e4dcd;
+    --icon-color: rgb(161, 255, 20);
+    --common-border: 1px solid rgba(128, 128, 128, 0.373);
+}
+
+.navJob{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+
+/* Brand name */
+.navJobbrand,
+.canvasJobBrand {
+    color: var(--secondary-color);
+    font-weight: 900;
+    font-size: 25px;
+    font-family: 'Lobster', sans-serif;
+}

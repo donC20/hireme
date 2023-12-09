@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Hedvig+Letters+Serif:opsz@12..24&family=Jost:wght@900&family=Lobster&family=Noto+Sans&family=Roboto:wght@300&family=Vina+Sans&display=swap');
 
+/* root */
+:root {
+    --main-text-color: #333;
+    --background-color: white;
+    --primary-color: rgb(161, 255, 20);
+    --secondary-color: #5e4dcd;
+    --icon-color: rgb(161, 255, 20);
+    --common-border: 1px solid rgba(128, 128, 128, 0.373);
+}

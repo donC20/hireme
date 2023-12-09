@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Lobster&family=Poppins:wght@300&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Hedvig+Letters+Serif:opsz@12..24&family=Jost:wght@900&family=Lobster&family=Noto+Sans&family=Roboto:wght@300&family=Vina+Sans&display=swap');
 
 /* root */
 :root {
@@ -10,10 +10,41 @@
     --common-border: 1px solid rgba(128, 128, 128, 0.373);
 }
 
-.navJob{
+.JobNavLink {
+    font-family: 'Noto Sans';
+    font-size: 14px;
+}
+
+.JobNavLink.active {
+    color: #5e4dcd !important;
+    font-weight: 900;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.navJob {
     border-bottom: 1px solid rgba(128, 128, 128, 0.337);
 }
 
+
+/* auth btns */
+.navJobAccounts li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.navJobAccounts a:hover {
+    color: var(--secondary-color);
+    box-sizing: border-box;
+    font-weight: bolder;
+    border-bottom: 1px solid var(--secondary-color);
+}
 
 /* Brand name */
 .navJobbrand,

@@ -1,20 +1,32 @@
 .searchInputContainer input {
     height: 45px;
-    width: auto;
+    width: 100%;
     border: 1px solid #77737353;
-    padding: 1%;
     font-size: 14px;
     font-family: 'Noto Sans';
     outline: none;
 }
 
+.paddedInput i:nth-child(3),
+.paddedInput i:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.paddedInput input {
+    padding-left: 2rem;
+}
 
 .searchInput {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+
 }
 
-.locationInput{
+
+.locationInput {
     border-left: none !important;
     border-right: none !important;
 }
@@ -27,6 +39,60 @@
     border: none;
     color: white;
 }
-.experienceInput	{
+
+
+
+
+
+.experienceInput {
     /* to be done */
+}
+
+.searchBackContainer {
+    height: max-content;
+    box-shadow: 0px 14px 14px -9px rgba(0, 0, 0, 0.15);
+}
+
+
+/* resposnsive layout */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+
+    .searchInputContainer input {
+        border-radius: 5px;
+    }
+
+
+    .locationInput {
+        border-left: 1px solid #77737353 !important;
+        border-right: 1px solid #77737353 !important;
+    }
+
+    .searchButton {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 20px;
+    }
+
+}
+
+
+/* resposnsive layout */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+
+
+    .searchInputContainer input {
+        border-radius: 5px;
+    }
+
+
+    .locationInput {
+        border-left: 1px solid #77737353 !important;
+        border-right: 1px solid #77737353 !important;
+    }
+
+    .searchButton {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 20px;
+    }
+
 }

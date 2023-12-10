@@ -1,0 +1,214 @@
+{
+  "jobPostings": [
+    {
+      "jobTitle": "Software Engineer",
+      "salary": "$90,000 - $100,000",
+      "location": "San Francisco, CA",
+      "companyName": "ABC Technologies",
+      "jobType": "Permanent dhsadha hdasjhdjka sh dasjdha jkajhsdjas hsjdhjas sajdhajksdhjsahd",
+      "postingDate": "2022-09-01",
+      "expirationDate": "2022-09-30",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Marketing Specialist",
+      "salary": "$60,000 - $70,000",
+      "location": "New York, NY",
+      "companyName": "XYZ Corporation",
+      "jobType": "Temporary",
+      "postingDate": "2022-09-10",
+      "expirationDate": "2022-10-10",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Data Analyst Intern",
+      "salary": "Paid Internship",
+      "location": "Seattle, WA",
+      "companyName": "123 Industries",
+      "jobType": "Intern",
+      "postingDate": "2022-08-15",
+      "expirationDate": "2022-09-15",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Frontend Developer",
+      "salary": "$70,000 - $80,000",
+      "location": "Austin, TX",
+      "companyName": "Tech Innovators",
+      "jobType": "Permanent",
+      "postingDate": "2022-08-20",
+      "expirationDate": "2022-09-20",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Graphic Designer",
+      "salary": "$50,000 - $60,000",
+      "location": "Chicago, IL",
+      "companyName": "Design Co.",
+      "jobType": "Temporary",
+      "postingDate": "2022-08-25",
+      "expirationDate": "2022-09-25",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Data Science Engineer",
+      "salary": "$100,000 - $120,000",
+      "location": "Boston, MA",
+      "companyName": "Tech Solutions",
+      "jobType": "Permanent",
+      "postingDate": "2022-08-30",
+      "expirationDate": "2022-09-30",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "HR Assistant",
+      "salary": "$40,000 - $45,000",
+      "location": "Los Angeles, CA",
+      "companyName": "HR Solutions Inc.",
+      "jobType": "Temporary",
+      "postingDate": "2022-09-05",
+      "expirationDate": "2022-10-05",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Product Manager",
+      "salary": "$80,000 - $90,000",
+      "location": "San Diego, CA",
+      "companyName": "Tech Enterprises",
+      "jobType": "Permanent",
+      "postingDate": "2022-09-10",
+      "expirationDate": "2022-10-10",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Finance Intern",
+      "salary": "Paid Internship",
+      "location": "New York, NY",
+      "companyName": "Financial Solutions",
+      "jobType": "Intern",
+      "postingDate": "2022-09-15",
+      "expirationDate": "2022-10-15",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Backend Developer",
+      "salary": "$85,000 - $95,000",
+      "location": "Seattle, WA",
+      "companyName": "Code Masters",
+      "jobType": "Permanent",
+      "postingDate": "2022-09-20",
+      "expirationDate": "2022-10-20",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "UX Designer",
+      "salary": "$70,000 - $80,000",
+      "location": "Austin, TX",
+      "companyName": "Creative Solutions",
+      "jobType": "Temporary",
+      "postingDate": "2022-09-25",
+      "expirationDate": "2022-10-25",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Data Scientist",
+      "salary": "$90,000 - $110,000",
+      "location": "Chicago, IL",
+      "companyName": "Data Analytics Inc.",
+      "jobType": "Permanent",
+      "postingDate": "2022-09-30",
+      "expirationDate": "2022-10-30",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Operations Manager",
+      "salary": "$75,000 - $85,000",
+      "location": "San Francisco, CA",
+      "companyName": "Operations Solutions",
+      "jobType": "Temporary",
+      "postingDate": "2022-10-05",
+      "expirationDate": "2022-11-05",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Marketing Intern",
+      "salary": "Paid Internship",
+      "location": "New York, NY",
+      "companyName": "Marketing Agency",
+      "jobType": "Intern",
+      "postingDate": "2022-10-10",
+      "expirationDate": "2022-11-10",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Full Stack Developer",
+      "salary": "$90,000 - $100,000",
+      "location": "Seattle, WA",
+      "companyName": "Tech Wizards",
+      "jobType": "Permanent",
+      "postingDate": "2022-10-15",
+      "expirationDate": "2022-11-15",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Sales Manager",
+      "salary": "$80,000 - $90,000",
+      "location": "Boston, MA",
+      "companyName": "Sales Solutions Inc.",
+      "jobType": "Temporary",
+      "postingDate": "2022-10-20",
+      "expirationDate": "2022-11-20",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "IT Support Specialist",
+      "salary": "$55,000 - $65,000",
+      "location": "Austin, TX",
+      "companyName": "Tech Support Co.",
+      "jobType": "Permanent",
+      "postingDate": "2022-10-25",
+      "expirationDate": "2022-11-25",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Graphic Design Intern",
+      "salary": "Paid Internship",
+      "location": "Los Angeles, CA",
+      "companyName": "Design Studio",
+      "jobType": "Intern",
+      "postingDate": "2022-10-30",
+      "expirationDate": "2022-11-30",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "DevOps Engineer",
+      "salary": "$95,000 - $105,000",
+      "location": "Chicago, IL",
+      "companyName": "Tech Solutions",
+      "jobType": "Permanent",
+      "postingDate": "2022-11-05",
+      "expirationDate": "2022-12-05",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Human Resources Manager",
+      "salary": "$90,000 - $100,000",
+      "location": "San Francisco, CA",
+      "companyName": "HR Solutions Inc.",
+      "jobType": "Temporary",
+      "postingDate": "2022-11-10",
+      "expirationDate": "2022-12-10",
+      "experience": "1-3 years"
+    },
+    {
+      "jobTitle": "Marketing Coordinator",
+      "salary": "$60,000 - $70,000",
+      "location": "New York, NY",
+      "companyName": "Marketing Agency",
+      "jobType": "Permanent",
+      "postingDate": "2022-11-15",
+      "expirationDate": "2022-12-15",
+      "experience": "0-3 years"
+    }
+  ]
+}

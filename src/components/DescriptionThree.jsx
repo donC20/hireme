@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import style from '../pages/Home/css/home.module.css'
 
 // information - 3 Common
 function DescriptionThree() {
     return (<>
         <section className="sec-4">
 
-            <div className="row gap-lg-5 gap-1  description-one">
+            <div className={`row gap-lg-5 gap-1  ${style['description-one']}`}>
                 <motion.div className="col-lg-5 col-12 mt-5"
                 initial={{ opacity: 0, x: "-100%" }}
                 whileInView={{ opacity: 1, x: 0 }}

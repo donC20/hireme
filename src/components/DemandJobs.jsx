@@ -1,12 +1,14 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import style from '../pages/Home/css/home.module.css'
+
 // demanded jobs
 const CardComp = ({ data }) => {
     return (<>
         <div className="col-6 col-lg-3 col-md-6 fade-in">
-            <div className="card demand-card">
+            <div className={`card ${style['demand-card']}`}>
                 <div className="card-body p-4">
-                    <div className="icon-container mb-3 d-flex justify-content-center align-items-center">
+                    <div className={`${style['icon-container']} mb-3 d-flex justify-content-center align-items-center`}>
                         <i className={`bi bi-${data.icon}`}></i>
                     </div>
                     <span className="job-category">{data.category}</span>
@@ -22,7 +24,7 @@ function DemandedJobs() {
         <section className="sec-2">
             <div className="d-flex justify-content-between align-items-center mt-5">
                 <h2 className="fw-bold">Jobs On-Demand</h2>
-                <p className="all-categories-btn">All categories</p>
+                <p className={style['all-categories-btn']}>All categories</p>
             </div>
             <motion.div className="row mt-3 gx-4 gy-4 justify-content-center"
                 initial={{ opacity: 0, x: "-100%" }}
@@ -42,13 +44,13 @@ function DemandedJobs() {
                 <CardComp data={{ icon: "sliders", category: "Video Edition & 3D work.", vacancy: "3450" }} />
                 <CardComp data={{ icon: "brush", category: "Art & Animation", vacancy: "2004" }} />
                 <div className="col-6 col-lg-3 col-md-6">
-                    <div className="card demand-card final-card">
+                    <div className={`card ${style['demand-card']} ${style['final-card']}`}>
                         <div className="card-body p-4 position-relative">
                             <div>
                                 <h1>20k+</h1>
                                 <p>Jobs posted.</p>
                             </div>
-                            <div className="icon-container-final mb-3 d-flex justify-content-center align-items-center position-absolute">
+                            <div className={`${style['icon-container-final']} mb-3 d-flex justify-content-center align-items-center position-absolute`}>
                                 <i className="bi bi-arrow-up-right-circle"></i>
                             </div>
                         </div>

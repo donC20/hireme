@@ -9,11 +9,11 @@ import PricingContainer from "../../components/PricingContainer";
 import UserMatrics from "../../components/UserMatrics";
 import Footer from "../../components/FooterContainer";
 import NavbarContainer from "../../components/NavbarContainer";
-import '../Home/css/home.css'
+import style from './css/home.module.css'
 function Home() {
     return (
-        <div className='homeBody'>
-            <header className="home-landing">
+        <div className={style.homeBody}>
+            <header className={style['home-landing']}>
                 <NavbarContainer />
                 <LandingContainer />
             </header>

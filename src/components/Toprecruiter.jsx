@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import companiesData from '../json/company.json';
+import style from '../pages/Home/css/home.module.css'
+
 // Top recruters
 function TopRecrutersList() {
     //  Custom previous arrow component
@@ -48,11 +50,11 @@ function TopRecrutersList() {
 
     return (
         <>
-            <div className="fw-bold top-headings mt-3">Top recruiters</div>
+            <div className={`fw-bold mt-3 ${style['top-headings']}`}>Top recruiters</div>
             {/* <hr/> */}
             <Slider {...settings}>
                 {companiesData.companies.map(item => (
-                    <div className="row mt-2 g-3 company-slider" key={item}>
+                    <div className={`row mt-2 g-3 ${style['company-slider']}`} key={item}>
                         <img src={item.logo} alt={item.name} />
                     </div>
                 ))}

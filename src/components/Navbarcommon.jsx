@@ -26,14 +26,14 @@ function Navbarcommon() {
                                     <Link className={`nav-link ${JobCss.JobNavLink} ${JobCss.active}`}>Jobs</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${JobCss.JobNavLink}`} to={'discussions'}>Discussions</Link>
+                                    <Link className={`nav-link ${JobCss.JobNavLink}`} to={'/discussions'}>Discussions</Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'learn'}>Learn</Link>
+                                    <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'/learn'}>Learn</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'contact'}>Contact us</Link>
+                                    <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'/contact'}>Contact us</Link>
                                 </li>
                             </ul>
                             <div className={`d-flex flex-column align-items-start ${JobCss.navJobAccounts}`}>
@@ -62,27 +62,27 @@ function Navbarcommon() {
                                 <Link className={`nav-link ${JobCss.JobNavLink} ${JobCss.active}`}>Jobs</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${JobCss.JobNavLink}`} to={'discussions'}>Discussions</Link>
+                                <Link className={`nav-link ${JobCss.JobNavLink}`} to={'/discussions'}>Discussions</Link>
                             </li>
 
                             <li className="nav-item">
-                                <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'learn'}>Learn</Link>
+                                <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'/learn'}>Learn</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'contact'}>Contact us</Link>
+                                <Link className={`nav-link ${JobCss.JobNavLink}`} aria-disabled="true" to={'/contact'}>Contact us</Link>
                             </li>
                         </ul>
                         <div>
                             <ul className={`d-flex gap-3 align-items-center ${JobCss.navJobAccounts}`}>
                                 <li>
-                                    <Link to={'login'}>Login</Link>
+                                    <Link to={'/login'}>Login</Link>
 
                                 </li>
                                 <li>
                                     <span>|</span>
                                 </li>
                                 <li>
-                                    <Link to={'register'}>Register</Link>
+                                    <Link to={'/register'}>Register</Link>
 
                                 </li>
                             </ul>

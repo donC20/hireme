@@ -1,9 +1,9 @@
 import React from 'react'
-
+import style from '../pages/Home/css/home.module.css'
 // user matrics
 function UserMatrics() {
     return (<>
-        <div className="row mt-3 gx-4 gy-4 justify-content-around user-matrics">
+        <div className={`row mt-3 gx-4 gy-4 justify-content-around  ${style.userMatrics}`}>
             <div className="col-6 col-6 col-lg-3 col-md-6 text-center">
                 <h1>22k+</h1>
                 <p>Jobs posted</p>

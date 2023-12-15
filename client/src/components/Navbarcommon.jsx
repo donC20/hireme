@@ -5,19 +5,19 @@ function Navbarcommon() {
     return (
         <div>
             {/* Small screen nav bar */}
-            <nav class={`navbar bg-white d-block d-lg-none ${JobCss.navJob}`}>
-                <div class="container-fluid">
+            <nav className={`navbar bg-white d-block d-lg-none ${JobCss.navJob}`}>
+                <div className="container-fluid">
                     <Link className={`navbar-brand ${JobCss.navJobbrand}`} to="/">HireMe</Link>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class={`offcanvas-title ${JobCss.canvasJobBrand}`} id="offcanvasNavbarLabel">HireMe</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div className="offcanvas-header">
+                            <h5 className={`offcanvas-title ${JobCss.canvasJobBrand}`} id="offcanvasNavbarLabel">HireMe</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body">
+                        <div className="offcanvas-body">
                             <ul className="navbar-nav me-auto mb-2 gap-3 mb-lg-0">
                                 <li className="nav-item">
                                     <Link className={`nav-link ${JobCss.JobNavLink}`} aria-current="page" to={'/'}>Home</Link>

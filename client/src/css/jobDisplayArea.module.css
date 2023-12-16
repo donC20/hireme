@@ -5,7 +5,9 @@
     overflow: auto;
 }
 
-
+i{
+    cursor:pointer;
+}
 
 /* Add these styles to your CSS file */
 div::-webkit-scrollbar-track {

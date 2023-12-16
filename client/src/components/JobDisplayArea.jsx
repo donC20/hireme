@@ -26,7 +26,14 @@ const JobDisplayArea = () => {
     function bookmarkJob(job) {
         setBookmark([...bookmaredItem, job])
     }
+    // remove bookmark function
+    function removeBookmark(job) {
+        setBookmark(bookmaredItem = bookmaredItem.filter(item => {
+            return item !== job
+        }))
 
+
+    }
 
     const jobsList = <div className='col-12 col-lg-10'>
         <div className={`mt-2 row g-4 ${style.area_one}`}>
@@ -50,10 +57,11 @@ const JobDisplayArea = () => {
     let bookmarkList = bookmaredItem.map(item => {
         return (
             <div className='card'>
-                <div className='card-body'>
+                <div className='card-body d-flex flex-row justify-content-between'>
                     <small className='text-dark'>
                         {item}
                     </small>
+                    <i class="bi bi-x-circle" onClick={() => { removeBookmark(item) }}></i>
                 </div>
             </div>
         )

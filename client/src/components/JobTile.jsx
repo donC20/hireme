@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import style from '../css/jobTile.module.css'
 function JobTile(props) {
-
+    
     let [favourite, setFavorite] = useState("bi-bookmark");
 
     function addToFav(dataTitle) {

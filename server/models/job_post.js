@@ -26,8 +26,8 @@ const jobSchema = new Schema({
         type: String,
         required: true
     },
-    postingDate: { type: String, required: true },
-    expirationDate: { type: String, required: true },
+    postingDate: { type: Date, default: Date.now },
+    expirationDate: { type: Date, required: true },
     experience: {
         type: String,
         required: true

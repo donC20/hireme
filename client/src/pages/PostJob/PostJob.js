@@ -57,7 +57,7 @@ const PostJob = () => {
         };
         setLoadingState(true);
         try {
-            const response = await fetch('/api/jobposts/addPost', {
+            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/addPost', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

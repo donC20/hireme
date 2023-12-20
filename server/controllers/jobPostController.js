@@ -1,40 +1,62 @@
 const jobPost = require('../models/job_post');
 const mongoose = require('mongoose');
 
+// Connect to MongoDB
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+    console.log('Connected to MongoDB');
+});
+const authCollection = db.collection('auth');
+
+
 // fetch post controller
-
 const getPostData = async (req, res) => {
-    try {
-        // Execute the query and await the results
-        const jobFetchData = await jobPost.find({}).sort({ createdAt: -1 });
+    // Get the API key from the request header
+    const { apikey } = req.params;
+    const apikeyFrmCollection = await authCollection.findOne({ apiKey: apikey });
+    if (apikeyFrmCollection) {
+        try {
+            // Execute the query and await the results
+            const jobFetchData = await jobPost.find({}).sort({ createdAt: -1 });
 
-        // Respond with the fetched data
-        res.status(200).json(jobFetchData);
-    } catch (error) {
-        console.error(error);
+            // Respond with the fetched data
+            res.status(200).json(jobFetchData);
+        } catch (error) {
+            console.error(error);
 
-        // Respond with an error message
-        res.status(500).json({ error: `Internal Server Error ${error}` });
+            // Respond with an error message
+            res.status(500).json({ error: `Internal Server Error ${error}` });
+        }
+    } else {
+        res.status(401).json({ error: 'Unauthorized' });
     }
 };
 
 // get single post controller
 const getSinglePostData = async (req, res) => {
-    const { id } = req.params;
-    try {
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(404).json({ error: 'Invalid ID' })
-        }
-        const singlePostData = await jobPost.findById({_id: id});
-        if (!jobPost) {
-            return res.status(404).json({ error: 'job not found' })
+    const { apikey, id } = req.params;
 
-        } else {
-            res.status(200).json(singlePostData);
+    const apikeyFrmCollection = await authCollection.findOne({ apiKey: apikey });
+
+    if (apikeyFrmCollection) {
+        try {
+            if (!mongoose.Types.ObjectId.isValid(id)) {
+                return res.status(404).json({ error: 'Invalid ID' })
+            }
+            const singlePostData = await jobPost.findById({ _id: id });
+            if (!jobPost) {
+                return res.status(404).json({ error: 'job not found' })
+
+            } else {
+                res.status(200).json(singlePostData);
+            }
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Internal Server Error' });
         }
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+        res.status(401).json({ error: 'Unauthorized' });
     }
 }
 
@@ -42,19 +64,26 @@ const getSinglePostData = async (req, res) => {
 
 // add post controller
 const addPostData = async (req, res) => {
-    try {
-        const jobData = req.body;
+    const { apikey } = req.params;
+    const apikeyFrmCollection = await authCollection.findOne({ apiKey: apikey });
+    if (apikeyFrmCollection) {
+        try {
+            const jobData = req.body;
 
-        // Create and save the new job post with dynamic fields
-        const jobInsertData = await jobPost.create(jobData);
+            // Create and save the new job post with dynamic fields
+            const jobInsertData = await jobPost.create(jobData);
 
-        // Respond with the inserted data
-        res.status(200).json(jobInsertData);
-    } catch (error) {
-        console.error(error);
+            // Respond with the inserted data
+            res.status(200).json(jobInsertData);
+        } catch (error) {
+            console.error(error);
 
-        // Respond with an error message
-        res.status(500).json({ error: 'Internal Server Error' });
+            // Respond with an error message
+            res.status(500).json({ error: 'Internal Server Error' });
+        }
+    }
+    else {
+        res.status(401).json({ error: 'Unauthorized' });
     }
 }
 
@@ -85,7 +114,7 @@ const updatePostData = async (req, res) => {
         if (!mongoose.Types.ObjectId.isValid(id)) {
             return res.status(404).json({ error: 'Invalid ID' })
         }
-        await jobPost.findOneAndUpdate({ _id: id },{
+        await jobPost.findOneAndUpdate({ _id: id }, {
             ...req.body
         });
         if (!jobPost) {

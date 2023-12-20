@@ -2,18 +2,13 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import style from '../css/jobDisplayArea.module.css'
 import JobTile from './JobTile'
-// import jobPost from '../json/jobpost.json'
-
-
-
-
 const JobDisplayArea = () => {
+
     const [jobPostings, setJobPostings] = useState(null)
     let [bookmaredItem, setBookmark] = useState([])
     useEffect(() => {
-
         const fetchJobpostData = async () => {
-            const response = await fetch('/api/jobposts')
+            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k')
             const json = await response.json()
             if (response.ok) {
                 setJobPostings(json)

@@ -51,9 +51,9 @@ function Navbarcommon() {
                                 </li>
                             </ul>
                             <div className={`d-flex flex-column align-items-start ${style.navJobAccounts}`}>
-                                <button className='btn btn-transperant'>Login</button>
+                                <Link className='btn btn-transperant' to={'/login'}>Login</Link>
                                 <span>Or</span>
-                                <button className='btn btn-transperant'>Register</button>
+                                <Link className='btn btn-transperant' to={'/register'}>Register</Link>
                             </div>
                         </div>
                     </div>

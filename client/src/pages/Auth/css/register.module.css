@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-image: url('../../../../public/images/register_moon.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+
+
+.sidetext>h1 {
+    color: white !important;
+    font-size: 75px;
+    font-weight: 900;
+    word-spacing: 15px;
+}
+
+.sidetext>div>span {
+    color: white !important;
+    font-size: small;
+    word-spacing: 2px;
+}
+
+.sideLine {
+    height: 5px;
+    width: 50%;
+    border-bottom: 1px solid white;
+}
+
+.companyName {
+    font-family: 'Lobster', sans-serif;
+}
+
+/* Right side */
+.formBodyOuter {
+    background-color: #000000;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(0.00, 0%, 74%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(208.10, 55.00000000000001%, 43%) 0, transparent 55%);
+}
+
+
+.formBody {
+    backdrop-filter: blur(7px) saturate(137%);
+    -webkit-backdrop-filter: blur(7px) saturate(137%);
+    background-color: rgba(17, 25, 40, 0.63);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.brandName h3 {
+    /* color:var(--secondary-color); */
+    color: white;
+    font-family: 'Lobster', sans-serif;
+}
+
+.brandName span {
+    /* color:var(--secondary-color); */
+    color: grey;
+}
+
+.formBody input {
+    color: white;
+    font-size: small;
+    background-color: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0.255);
+    min-height: 50px !important;
+    height: auto !important;
+    box-shadow: none !important;
+}
+
+.formBody input:focus {
+    background-color: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0.255);
+    color: white;
+    font-size: small;
+}
+
+.formBody label {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: small;
+    background: transparent !important;
+}
+
+.socialMenus button {
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    border: 0.5px solid rgba(255, 255, 255, 0.255);
+    box-shadow: none !important;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.socialMenus button:hover {
+    background-color: rgba(128, 128, 128, 0.24);
+    border: transparent;
+}
+
+/* toggle btn */
+

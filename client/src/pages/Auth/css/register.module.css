@@ -11,6 +11,7 @@
 
 
 
+
 .sidetext>h1 {
     color: white !important;
     font-size: 75px;
@@ -44,6 +45,9 @@
 
 
 .formBody {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     backdrop-filter: blur(7px) saturate(137%);
     -webkit-backdrop-filter: blur(7px) saturate(137%);
     background-color: rgba(17, 25, 40, 0.63);
@@ -103,5 +107,42 @@
     border: transparent;
 }
 
-/* toggle btn */
+.isEmployer{
+    font-size:small;
+    color:grey;
+}
 
+#registerBtn,#loginBtn{
+    color:black;
+    font-size:small;
+    width:100%;
+    height:50px;
+    border-radius:5px;
+    background:white;
+    border:1px solid grey;
+    transition: 0.5s ease-in-out;
+
+}
+
+#registerBtn:hover{
+color:white;
+background:blue;
+border:transparent;
+}
+#loginBtn:hover{
+color:white;
+background:blue;
+border:transparent;
+}
+
+
+/* resposnsive layout */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+/* Right side */
+.formBodyOuter,.formBody {
+   height:100vh;
+  
+}
+
+
+}

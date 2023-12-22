@@ -1,18 +1,21 @@
 const jobPost = require('../models/job_post');
 const mongoose = require('mongoose');
 
+// import the collections from connectCollection.js
+const {authCollection} = require('../connectCollection');
 // Connect to MongoDB
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-    console.log('Connected to MongoDB');
-});
-const authCollection = db.collection('auth');
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// db.once('open', () => {
+//     console.log('Connected to MongoDB');
+// });
+// const authCollection = db.collection('auth');
 
 
 // fetch post controller
 const getPostData = async (req, res) => {
     // Get the API key from the request header
+    console.log(authCollection);
     const { apikey } = req.params;
     const apikeyFrmCollection = await authCollection.findOne({ apiKey: apikey });
     if (apikeyFrmCollection) {

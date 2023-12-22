@@ -1,18 +1,57 @@
-import React from 'react'
+import { useState, React } from 'react'
 import style from './css/register.module.css'
 import YesNoToggler from '../../components/yesNoToggler'
 
 const Register = () => {
+
+    const createUser = async (e) => {
+        const body = {
+            name: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            userType: document.getElementById('userType').value,
+
+        }
+        console.log(body);
+
+        try {
+            
+            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/createUser', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+            });
+
+            
+            if (response.ok) {
+                console.log('Post successful!');
+                // setLoadingState(false);
+                // notify('Job Posted Successfully!', 'success');
+                // Handle success, maybe redirect or show a success message
+            } else {
+                console.error('Post failed', 'error');
+                // setLoadingState(false);
+                // notify('Job Post Failed!');
+
+                // Handle error, maybe show an error message
+            }
+        } catch (error) {
+            console.log('Error during post:', error);
+        }
+    }
+
     return (
         <div className={`row ${style.body}`}>
-            <div className={`col-6 ${style.sidetext}`}>
+            <div className={`col-lg-6 d-none d-lg-block ${style.sidetext}`}>
                 <h1 className='pt-5 ps-5'>Come, Join Us!</h1>
                 <div className='d-flex align-items-center gap-3 ps-5'>
                     <hr className={style.sideLine} />
                     <span className=''>Millions of users trust <span className={style.companyName}>HireMe</span></span>
                 </div>
             </div>
-            <div className={`col-6 p-5`}>
+            <div className={`col-lg-6 col-12 p-0 p-lg-5`}>
                 <div className={`${style.formBodyOuter}`}>
 
                     <div className={`p-5 ${style.formBody}`}>
@@ -32,16 +71,29 @@ const Register = () => {
                         </div>
 
                         <div className="form-floating mb-3">
-                            <input type="text" className="form-control" id="floatingInput" placeholder="name@example.com" />
-                            <label for="floatingInput"><i className="bi bi-alphabet me-2"></i>How do we call you?</label>
+                            <input type="text" className="form-control" id="username" placeholder="name@example.com" />
+                            <label htmlFor="username"><i className="bi bi-alphabet me-2"></i>How do we call you?</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input type="emal" className="form-control" id="floatingInput" placeholder="name@example.com" />
-                            <label for="floatingInput"><i className="bi bi-at me-2"></i>Your email</label>
+                            <input type="email" className="form-control" id="email" placeholder="name@example.com" />
+                            <label htmlFor="email"><i className="bi bi-at me-2"></i>Your email</label>
                         </div>
+                        <div className="position-relative">
+                            <div className="form-floating mb-3">
+                                <input type="password" className="form-control" id="password" placeholder="name@example.com" />
+                                <label htmlFor="password"><i className="bi bi-key me-2"></i>Set up new password</label>
+                            </div>
+                            <i className="bi bi-eye me-2 position-absolute top-0 end-0 text-light mt-3 me-4"></i>
+                        </div>
+
                         <div className="d-flex justify-content-between">
-                            <span className='text-light'>I am an employer</span>
+                            <span className={style.isEmployer}>I am an employer</span>
                             <YesNoToggler />
+                        </div>
+
+                        <div className="d-flex justify-content-center w-100 gap-3 mt-4">
+                            <button id={style.registerBtn} onClick={createUser}>Register</button>
+                            <button id={style.loginBtn}>Already have an account?</button>
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,8 @@ const createUser = async (req, res) => {
     if (apikeyFrmCollection) {
         try {
             const userData = req.body;
-            res.status(200).json(userData);
+            await userSchema.create(userData);
+            res.status(200).json({msg:"Data inserted"});
         } catch (error) {
             console.error(error);
             res.status(500).json({ error: `Internal Server Error ${error}` });

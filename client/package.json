@@ -1,5 +1,4 @@
 {
-  "proxy": "http://localhost:3001",
   "name": "hireme",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +11,7 @@
     "bootstrap": "^5.3.2",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.12",
+    "http-proxy-middleware": "^2.0.6",
     "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",

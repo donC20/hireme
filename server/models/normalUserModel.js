@@ -21,11 +21,11 @@ const userSchema = new Schema({
     },
     prefferdJobs: {
         type: Array,
-        required: false,
+        default: [],
     },
     profileImage: {
         type: String,
-        required: false,
+        default: "",
     },
     userType: {
         type: String,
@@ -33,15 +33,15 @@ const userSchema = new Schema({
     },
     address: {
         type: String,
-        required: false,
+        default: "",
     },
     dob: {
         type: Date,
-        required: false,
+        default: Date.now,
     },
     gender: {
         type: String,
-        required: false,
+        default: "Not Specified",
     }
 });
 

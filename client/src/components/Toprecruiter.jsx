@@ -8,19 +8,19 @@ import style from '../pages/Home/css/home.module.css'
 // Top recruters
 function TopRecrutersList() {
     //  Custom previous arrow component
-    const CustomPrevArrow = ({ onClick }) => (
-        <button onClick={onClick} className="custom-arrow custom-prev-arrow">
-            <i className="bi bi-arrow-left-circle-fill"></i>
+    // const CustomPrevArrow = ({ onClick }) => (
+    //     <button onClick={onClick} className="custom-arrow custom-prev-arrow">
+    //         <i className="bi bi-arrow-left-circle-fill"></i>
 
-        </button>
-    );
+    //     </button>
+    // );
 
-    // Custom next arrow component
-    const CustomNextArrow = ({ onClick }) => (
-        <button onClick={onClick} className="custom-arrow custom-next-arrow">
-            <i className="bi bi-arrow-right-circle-fill"></i>
-        </button>
-    );
+    // // Custom next arrow component
+    // const CustomNextArrow = ({ onClick }) => (
+    //     <button onClick={onClick} className="custom-arrow custom-next-arrow">
+    //         <i className="bi bi-arrow-right-circle-fill"></i>
+    //     </button>
+    // );
 
     const settings = {
         dots: false,

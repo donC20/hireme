@@ -46,10 +46,10 @@ const PostJob = () => {
         // Extract form data
         const formData = {
             jobTitle: document.getElementById('jobTitle').value,
-            salary: "$" + document.getElementById('minSal').value + " - " + "$" + document.getElementById('maxSal').value,
+            salary: `$${document.getElementById('minSal').value} - $${document.getElementById('maxSal').value}`,
             location: document.getElementById('jobLocation').value,
             jobType: document.getElementById('jobType').value,
-            experience: document.getElementById('minExp').value + " - " + document.getElementById('maxExp').value + " years",
+            experience:`${document.getElementById('minExp').value} - ${document.getElementById('maxExp').value} years`,
             companyName: "testCompany Inc",
             expirationDate: document.getElementById('expirationDate').value,
             jobDescription: document.getElementById('jobDescription').value,

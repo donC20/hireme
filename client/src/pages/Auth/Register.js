@@ -1,13 +1,15 @@
 import { useState, React } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import style from './css/register.module.css'
 import YesNoToggler from '../../components/yesNoToggler'
 import LoadingProgress from '../../components/LoadingProgress'
 import 'react-toastify/dist/ReactToastify.css';
-
+// import $ from "jquery";
 const Register = () => {
 
     const [loadingState, setLoadingState] = useState('none');
+    const navigate = useNavigate();
 
 
 
@@ -42,6 +44,7 @@ const Register = () => {
     };
 
 
+
     const createUser = async (e) => {
         setLoadingState('block');
         const body = {
@@ -65,7 +68,6 @@ const Register = () => {
 
 
             if (response.ok) {
-                console.log($('#username').val());
                 console.log('Post successful!');
                 setLoadingState('none');
                 // setLoadingState(false);
@@ -84,6 +86,12 @@ const Register = () => {
             console.log('Error during post:', error);
         }
     }
+
+    const navigatoLogin=()=>{
+        navigate("/login");
+    }
+
+
 
     return (
         <div className={`row ${style.body}`}>
@@ -121,19 +129,19 @@ const Register = () => {
                             <div className="form-floating mb-3">
                                 <input type="text" className="form-control" id="username" placeholder="name@example.com" />
                                 <label htmlFor="username"><i className="bi bi-alphabet me-2"></i>How do we call you?</label>
-                                <small className={`text-danger ${style.errorText} ${style.errorTextUsername}`}>Error</small>
+                                {/* <small className={`text-danger ${style.errorText} ${style.errorTextUsername}`}>Error</small> */}
                             </div>
                             <div className="form-floating mb-3">
                                 <input type="email" className="form-control" id="email" placeholder="name@example.com" />
                                 <label htmlFor="email"><i className="bi bi-at me-2"></i>Your email</label>
-                                <small className={`text-danger ${style.errorText} ${style.errorTextEmail}`}>Error</small>
+                                {/* <small className={`text-danger ${style.errorText} ${style.errorTextEmail}`}>Error</small> */}
 
                             </div>
                             <div className="position-relative">
                                 <div className="form-floating mb-3">
                                     <input type="password" className="form-control" id="password" placeholder="name@example.com" />
                                     <label htmlFor="password"><i className="bi bi-key me-2"></i>Set up new password</label>
-                                    <small className={`text-danger ${style.errorText} ${style.errorTextPassword}`}>Error</small>
+                                    {/* <small className={`text-danger ${style.errorText} ${style.errorTextPassword}`}>Error</small> */}
 
                                 </div>
                                 <i className="bi bi-eye me-2 position-absolute top-0 end-0 text-light mt-3 me-4"></i>
@@ -145,8 +153,8 @@ const Register = () => {
                             </div>
 
                             <div className="d-flex justify-content-center w-100 gap-3 mt-4">
-                                <button id={style.registerBtn} onClick={createUser}>Continue</button>
-                                <button id={style.loginBtn}>Already have an account?</button>
+                                <button id={style.registerBtn} onClick={createUser}>Register</button>
+                                <button id={style.loginBtn} onClick={navigatoLogin}>Already have an account?</button>
                             </div>
                         </div>
                     </div>

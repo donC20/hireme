@@ -10,7 +10,30 @@ const createUser = async (req, res) => {
         try {
             const userData = req.body;
             await userSchema.create(userData);
-            res.status(200).json({msg:"Data inserted"});
+            res.status(200).json({ msg: "Data inserted" });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: `Internal Server Error ${error}` });
+        }
+    }
+    else {
+        res.status(401).json({ error: 'Unauthorized' });
+    }
+}
+
+// user login authenticate
+const userAuthenticate = async (req, res) => {
+    const { apikey } = req.params;
+    const apikeyFrmCollection = await authCollection.findOne({ apiKey: apikey });
+    if (apikeyFrmCollection) {
+        try {
+            const { email, password } = req.body;
+            const result = await userSchema.find({ "email": email, "password": password });
+            if (result.length !== 0) {
+                res.status(200).json({ msg: "valid" });
+            } else {
+                res.status(200).json({ msg: "invalid" });
+            }
         } catch (error) {
             console.error(error);
             res.status(500).json({ error: `Internal Server Error ${error}` });
@@ -22,5 +45,5 @@ const createUser = async (req, res) => {
 }
 
 module.exports = {
-    createUser
+    createUser, userAuthenticate
 }

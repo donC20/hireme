@@ -1,7 +1,16 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import thisCss from '../css/navbar.module.css'
+import { useNavigate } from 'react-router-dom';
+
 function NavbarContainer() {
+    const navigate = useNavigate();
+
+    const navigatoSomewhere = (path) => {
+        console.log('fd');
+        navigate(`/${path}`);
+    }
+
     return (
         <>
 
@@ -53,15 +62,15 @@ function NavbarContainer() {
                                 </li>
                             </ul>
                             <div className="account_section d-flex gap-1">
-                            <button className={thisCss['login-btn']}>
-                                <img className={thisCss.svgIcon} src="icons/login_lock.svg" alt="login" />
-                                Login
-                            </button>
-                            <button className={thisCss["signup-btn"]}>
-                                <img className={thisCss.svgIcon} src="icons/sign-up.svg" alt="signup" />
-                                SignUp
-                            </button>
-                        </div>
+                                <button className={thisCss['login-btn']} onClick={()=>navigatoSomewhere('login')}>
+                                    <img className={thisCss.svgIcon} src="icons/login_lock.svg" alt="login" />
+                                    Login
+                                </button>
+                                <button className={thisCss["signup-btn"]} onClick={()=>navigatoSomewhere('register')}>
+                                    <img className={thisCss.svgIcon} src="icons/sign-up.svg" alt="signup" />
+                                    SignUp
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -118,15 +127,15 @@ function NavbarContainer() {
                             </li>
                         </ul>
                         <div className="account_section d-flex gap-1">
-                            <button className={thisCss['login-btn']}>
-                                <img className={thisCss.svgIcon} src="icons/login_lock.svg" alt="login" />
-                                Login
-                            </button>
-                            <button className={thisCss["signup-btn"]}>
-                                <img className={thisCss.svgIcon} src="icons/sign-up.svg" alt="signup" />
-                                SignUp
-                            </button>
-                        </div>
+                                <button className={thisCss['login-btn']} onClick={()=>navigatoSomewhere('login')}>
+                                    <img className={thisCss.svgIcon} src="icons/login_lock.svg" alt="login" />
+                                    Login
+                                </button>
+                                <button className={thisCss["signup-btn"]} onClick={()=>navigatoSomewhere('register')}>
+                                    <img className={thisCss.svgIcon} src="icons/sign-up.svg" alt="signup" />
+                                    SignUp
+                                </button>
+                            </div>
                     </div>
                 </div>
             </nav>

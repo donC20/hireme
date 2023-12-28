@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { addPostData, getPostData, getSinglePostData, updatePostData, deletePostData } = require('../controllers/jobPostController');
-const { createUser } = require('../controllers/userRoutesController');
+const { createUser, userAuthenticate } = require('../controllers/userRoutesController');
 // Fetch all job posts
 router.get('/:apikey', getPostData)
 
@@ -23,8 +23,10 @@ router.get('*', (req, res) => {
 })
 
 // User section
-
+// --------------------------------------------------------------
 // create user
 router.post('/:apikey/createUser', createUser);
+// user login
+router.post('/:apikey/userAuthenticate', userAuthenticate);
 
 module.exports = router;

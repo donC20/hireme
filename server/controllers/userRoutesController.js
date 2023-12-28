@@ -46,6 +46,25 @@ const userAuthenticate = async (req, res) => {
     }
 }
 
+// sesssion destroy / logout
+const logout = (req, res) => {
+    req.session.destroy((err) => {
+        try {
+            if (err) {
+                console.error('Error destroying session:', err);
+                res.status(200).json({ output: false })
+            } else {
+                res.clearCookie('connect.sid');
+                res.status(200).json({ output: true })
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
+}
+
+
+
 module.exports = {
-    createUser, userAuthenticate
+    createUser, userAuthenticate, logout
 }

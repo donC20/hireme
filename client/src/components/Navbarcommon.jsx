@@ -1,9 +1,8 @@
 import { useEffect, useState, React } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-
 import style from '../css/navbarCommon.module.css'
-import { CommonSession, SessionValue } from '../hooks/sessionHooks';
+import { CommonSession, EndLife, SessionValue } from '../hooks/sessionHooks';
 function Navbarcommon() {
     const navigate = useNavigate();
 
@@ -24,6 +23,12 @@ function Navbarcommon() {
 
         isSession();
     }, []);
+
+    const logout = () => {
+        console.log('loggedout');
+        EndLife(navigate);
+    }
+
 
     // Get the current URL from the address bar
     const currentUrl = window.location.href;
@@ -79,7 +84,7 @@ function Navbarcommon() {
                                 <Link className='btn btn-transperant' to={'/register'}>Register</Link>
                             </div>
                             <div className={`${sessiontoken ? 'd-block' : 'd-none'} ${style.navJobAccounts}`}>
-                                <Link className='btn btn-transperant' to={'/login'}>LogOut</Link>
+                                <Link className='btn btn-transperant' onClick={logout}>Logout</Link>
                             </div>
                         </div>
                     </div>
@@ -127,7 +132,7 @@ function Navbarcommon() {
                                 </li>
                             </ul>
                             <div className={`${sessiontoken ? 'd-block' : 'd-none'} ${style.navJobAccounts}`}>
-                                <Link className='btn btn-transperant' to={'/login'}>LogOut</Link>
+                                <Link className='btn btn-transperant' onClick={logout}>Logout</Link>
                             </div>
                         </div>
                     </div>

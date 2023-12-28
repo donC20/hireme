@@ -2,6 +2,20 @@ const express = require('express');
 const router = express.Router();
 const { addPostData, getPostData, getSinglePostData, updatePostData, deletePostData } = require('../controllers/jobPostController');
 const { createUser, userAuthenticate } = require('../controllers/userRoutesController');
+
+// login sesssion route
+router.get('/session', (req, res) => {
+    if (req.session.USER_ID) {
+        console.log('dsd');
+        console.log(req.session.USER_ID);
+        res.status(200).json({ valid: true, userID: req.session.USER_ID });
+    } else {
+        res.status(200).json({ valid: false });
+        console.log(req.session.USER_ID);
+    }
+})
+
+
 // Fetch all job posts
 router.get('/:apikey', getPostData)
 

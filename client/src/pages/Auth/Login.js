@@ -1,14 +1,21 @@
-import { useState, React } from 'react'
+import { useState, useEffect, React } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import LoadingProgress from '../../components/LoadingProgress'
 import style from './css/login.module.css'
 import 'react-toastify/dist/ReactToastify.css';
+import { LoginToJobsSession } from '../../hooks/sessionHooks';
+import FullBodyLoading from '../../components/FullBodyLoading';
 const Login = () => {
-
-    const [loadingState, setLoadingState] = useState('none');
     const navigate = useNavigate();
+    const [loadingState, setLoadingState] = useState('none');
+
+    // session checking
+    useEffect(() => {
+        LoginToJobsSession(navigate);
+    }, []);
+
 
 
 
@@ -42,7 +49,8 @@ const Login = () => {
         }
     };
 
-    const navigatoRegister=()=>{
+    const navigatoRegister = () => {
+
         console.log('fd');
         navigate("/register");
     }
@@ -61,6 +69,7 @@ const Login = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: 'include',
                 body: JSON.stringify(dataBody),
             });
 
@@ -69,7 +78,7 @@ const Login = () => {
                 if (responseData.msg === "valid") {
                     notify('Login successful', 'success');
                     setLoadingState('none');
-                    navigate("/jobs");
+                    navigate('/jobs', { replace: true });
                 } else {
                     setLoadingState('none');
                     notify('Invalid username or password', 'error');
@@ -87,6 +96,7 @@ const Login = () => {
 
 
     return (
+
         <div>
             <div className={style.content}>
                 <div className={style['flex-div']}>
@@ -133,6 +143,7 @@ const Login = () => {
 
                 </div>
             </div>
+
             <ToastContainer
                 position="top-right"
                 autoClose={5000}

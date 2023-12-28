@@ -4,6 +4,8 @@ import style from '../css/jobDisplayArea.module.css'
 import JobTile from './JobTile'
 const JobDisplayArea = () => {
 
+    // session
+
     const [jobPostings, setJobPostings] = useState(null)
     let [bookmaredItem, setBookmark] = useState([])
     useEffect(() => {

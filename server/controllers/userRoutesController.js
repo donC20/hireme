@@ -1,7 +1,6 @@
 const userSchema = require('../models/normalUserModel')
 const { authCollection } = require('../connectCollection');
 
-
 // create user / user registration
 const createUser = async (req, res) => {
     const { apikey } = req.params;
@@ -28,8 +27,11 @@ const userAuthenticate = async (req, res) => {
     if (apikeyFrmCollection) {
         try {
             const { email, password } = req.body;
+            console.log(req.session);
             const result = await userSchema.find({ "email": email, "password": password });
             if (result.length !== 0) {
+                req.session.USER_ID = result[0]._id;
+                console.log(req.session.USER_ID);
                 res.status(200).json({ msg: "valid" });
             } else {
                 res.status(200).json({ msg: "invalid" });

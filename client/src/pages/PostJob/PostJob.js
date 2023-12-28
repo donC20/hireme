@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Navbarcommon from '../../components/Navbarcommon'
 import style from './css/postJob.module.css'
 import 'react-toastify/dist/ReactToastify.css';
+import { CommonSession } from '../../hooks/sessionHooks';
 const PostJob = () => {
 
     let [loadingState, setLoadingState] = useState(false);

@@ -31,7 +31,8 @@ const userAuthenticate = async (req, res) => {
             const result = await userSchema.find({ "email": email, "password": password });
             if (result.length !== 0) {
                 req.session.USER_ID = result[0]._id;
-                console.log(req.session.USER_ID);
+                req.session.USER_DATA = result[0];
+    
                 res.status(200).json({ msg: "valid" });
             } else {
                 res.status(200).json({ msg: "invalid" });

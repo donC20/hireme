@@ -6,6 +6,7 @@ import PostJob from "./pages/PostJob/PostJob";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
 import FullBodyLoading from "./components/FullBodyLoading";
+import Profile from "./pages/Profile/Profile";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element: <Login />,
+    },
+    {
+        path: "/profile",
+        element: <Profile />,
     },
 ]);
 

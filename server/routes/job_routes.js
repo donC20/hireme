@@ -7,7 +7,7 @@ const { createUser, userAuthenticate, logout } = require('../controllers/userRou
 router.get('/session', (req, res) => {
     if (req.session.USER_ID) {
         console.log(req.session.USER_ID);
-        res.status(200).json({ valid: true, userID: req.session.USER_ID });
+        res.status(200).json({ valid: true, userID: req.session.USER_ID, userData: req.session.USER_DATA });
     } else {
         res.status(200).json({ valid: false });
         console.log(req.session.USER_ID);

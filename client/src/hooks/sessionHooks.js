@@ -13,7 +13,6 @@ export const LoginToJobsSession = async (navigate) => {
 
         if (response.ok) {
             const sessionData = await response.json();
-            console.log(sessionData);
             if (sessionData.valid) {
                 navigate('/jobs', { replace: true });
             }
@@ -39,7 +38,6 @@ export const CommonSession = async (navigate) => {
 
         if (response.ok) {
             const sessionData = await response.json();
-            console.log(sessionData);
             if (!sessionData.valid) {
                 navigate('/login', { replace: true });
             }
@@ -64,7 +62,7 @@ export const SessionValue = async () => {
         if (response.ok) {
 
             const sessionData = await response.json();
-            return sessionData.valid;
+            return sessionData;
         } else {
             console.error('Failed to fetch session data');
             return false;

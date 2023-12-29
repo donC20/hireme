@@ -1,10 +1,8 @@
-import React from 'react'
-import { useState } from 'react'
+import { useState, React } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import Navbarcommon from '../../components/Navbarcommon'
 import style from './css/postJob.module.css'
 import 'react-toastify/dist/ReactToastify.css';
-import { CommonSession } from '../../hooks/sessionHooks';
 const PostJob = () => {
 
     let [loadingState, setLoadingState] = useState(false);
@@ -50,7 +48,7 @@ const PostJob = () => {
             salary: `$${document.getElementById('minSal').value} - $${document.getElementById('maxSal').value}`,
             location: document.getElementById('jobLocation').value,
             jobType: document.getElementById('jobType').value,
-            experience:`${document.getElementById('minExp').value} - ${document.getElementById('maxExp').value} years`,
+            experience: `${document.getElementById('minExp').value} - ${document.getElementById('maxExp').value} years`,
             companyName: "testCompany Inc",
             expirationDate: document.getElementById('expirationDate').value,
             jobDescription: document.getElementById('jobDescription').value,

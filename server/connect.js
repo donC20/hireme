@@ -16,7 +16,7 @@ app.use(express.json());
 
 // For vercel deployment
 app.use(cors({
-    origin: 'https://hireme-nu.vercel.app',
+    origin: 'https://hireme-api.vercel.app',
     credentials: true,
   }));
 

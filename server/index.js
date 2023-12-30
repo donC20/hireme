@@ -16,7 +16,7 @@ app.use(express.json());
 
 // For vercel deployment
 app.use(cors({
-    origin: 'https://hireme-api.vercel.app/',
+    origin: 'https://hireme-nu.vercel.app',
     credentials: true,
   }));
 
@@ -42,11 +42,12 @@ app.use(session({
 app.use((req, res, next) => {
     // console.log(req.url, req.method);
     // console.log('session started Hello');
-    res.json({msg:"Hello connected"})
+    res.json({msg:"Hello connected"})   
     next();
 })
 // routes
 app.use('/api/jobposts', jobRoutes);
+
 
 mongoose.connect(process.env.REACT_MONGO_URI).then(() => {
     // listen for request

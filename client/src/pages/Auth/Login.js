@@ -16,9 +16,6 @@ const Login = () => {
         LoginToJobsSession(navigate);
     }, []);
 
-
-
-
     // Toast
     const notify = (toastMessage, status) => {
         switch (status) {

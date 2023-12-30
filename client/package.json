@@ -1,5 +1,5 @@
 {
-  "proxy": "https://hireme-api.vercel.app",
+  "proxy": "https://hireme-api-97hy.onrender.com",
   "name": "hireme",
   "version": "0.1.0",
   "private": true,

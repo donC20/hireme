@@ -60,7 +60,7 @@ const Login = () => {
         };
 
         try {
-            const response = await fetch('api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/userAuthenticate', {
+            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/userAuthenticate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

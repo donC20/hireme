@@ -1,41 +1,10 @@
 {
     "version": 2,
-    "routes": [
+    "builds": [
         {
-            "src": "/api/(.*)",
-            "methods": [
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE"
-            ],
-            "headers": [
-                {
-                    "key": "Access-Control-Allow-Origin",
-                    "value": "https://hireme-nu.vercel.app"
-                },
-                {
-                    "key": "Access-Control-Allow-Methods",
-                    "value": "GET,POST,PUT,DELETE"
-                },
-                {
-                    "key": "Access-Control-Allow-Headers",
-                    "value": "X-Requested-With, Content-Type"
-                },
-                {
-                    "key": "Access-Control-Allow-Credentials",
-                    "value": "true"
-                }
-            ],
-            "continue": true,
-            "handle": "script"
-        },
-        {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "*.js",
+            "use": "@vercel/node"
         }
     ]
+    
 }

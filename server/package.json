@@ -2,9 +2,9 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "connect.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "node connect.js"
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "",

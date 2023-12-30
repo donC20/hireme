@@ -49,11 +49,15 @@ app.use((req, res, next) => {
 app.use('/api/jobposts', jobRoutes);
 
 
-mongoose.connect(process.env.REACT_MONGO_URI).then(() => {
-    // listen for request
-    const PORT = process.env.PORT;
-    app.listen(PORT, () => {
-        console.log(`Server is running on port ${PORT}`);
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => {
+        const PORT = process.env.PORT;
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    })
+    .catch((err) => {
+        console.error('MongoDB connection error:', err);
     });
-}).catch((err) => { console.log(err) })
+
 

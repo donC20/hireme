@@ -23,6 +23,15 @@ const createUser = async (req, res) => {
 // user login authenticate
 const userAuthenticate = async (req, res) => {
     const { apikey } = req.params;
+    res.setHeader('Access-Control-Allow-Credentials', true)
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    // another common pattern
+    // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    )
     const apikeyFrmCollection = await authCollection.findOne({ apiKey: apikey });
     if (apikeyFrmCollection) {
         try {
@@ -32,7 +41,7 @@ const userAuthenticate = async (req, res) => {
             if (result.length !== 0) {
                 req.session.USER_ID = result[0]._id;
                 req.session.USER_DATA = result[0];
-    
+
                 res.status(200).json({ msg: "valid" });
             } else {
                 res.status(200).json({ msg: "invalid" });

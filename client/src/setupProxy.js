@@ -7,7 +7,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://hireme-api.vercel.app',
+      target: 'https://hireme-api-97hy.onrender.com',
       changeOrigin: true,
     })
   );

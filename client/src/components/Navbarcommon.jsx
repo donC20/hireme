@@ -13,7 +13,7 @@ function Navbarcommon() {
             try {
                 await CommonSession(navigate);
                 const token = await SessionValue();
-                console.log(token);
+                // console.log(token);
 
                 // Use functional update to ensure that the new state depends on the previous state
                 setSessionToken(prevSessionToken => {
@@ -57,7 +57,6 @@ function Navbarcommon() {
             <nav className={`navbar bg-white d-block d-lg-none ${styles.navJob}`}>
                 <div className="container-fluid">
                     <Link className={`navbar-brand ${styles.navJobbrand}`} to="/">HireMe</Link>
-
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -8,6 +8,7 @@ import Login from "./pages/Auth/Login";
 import FullBodyLoading from "./components/FullBodyLoading";
 import Profile from "./pages/Profile/Profile";
 const router = createBrowserRouter([
+
     {
         path: "/",
         element: <Home />,

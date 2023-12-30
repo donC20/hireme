@@ -36,7 +36,7 @@
 a {
     text-decoration: none;
     color: black;
-    
+
 }
 
 .navJobAccounts a:hover {
@@ -55,13 +55,15 @@ a {
     font-family: 'Lobster', sans-serif;
 }
 
-.authenticatedAcc{
-    background:white;
-    border:1px solid rgba(128, 128, 128, 0.418);
-    font-size:small;
+.authenticatedAcc {
+    background: white;
+    border: 1px solid rgba(128, 128, 128, 0.418);
+    font-size: small;
 }
+
 #userImg {
     width: 30px;
     height: 30px;
     object-fit: cover;
+    border:1px solid grey;
 }

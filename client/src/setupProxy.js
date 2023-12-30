@@ -1,5 +1,18 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
+
+// for vercel
+// module.exports = function(app) {
+//   app.use(
+//     '/api',
+//     createProxyMiddleware({
+//       target: 'https://hireme-nu.vercel.app',
+//       changeOrigin: true,
+//     })
+//   );
+// };
+
+// for localhost
 module.exports = function(app) {
   app.use(
     '/api',

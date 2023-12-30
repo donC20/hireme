@@ -41,7 +41,7 @@ const userSchema = new Schema({
     },
     gender: {
         type: String,
-        default: "Not Specified",
+        default: "",
     }
 });
 

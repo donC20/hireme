@@ -100,9 +100,9 @@ function Navbarcommon() {
                                         </li>
                                     </ul>
                                     <div className='dropdown-center'>
-                                        <button className={`${sessiontoken.valid ? 'd-flex' : 'd-none'} ${styles.authenticatedAcc} align-items-center gap-1 rounded-pill p-2 `} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button className={`${sessiontoken.valid ? 'd-flex' : 'd-none'} ${styles.authenticatedAcc} align-items-center gap-1 rounded-pill `} type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <img src={`${sessiontoken.userData.profileImage ? sessiontoken.userData.profileImage : '/images/default_user.jpg'}`} alt='user' className='rounded-circle' id={styles.userImg} />
-                                            <span className='d-inline-block text-truncate' style={{ maxWidth: '125px' }}>{sessiontoken.userData.name}</span>
+                                            {/* <span className='d-inline-block text-truncate' style={{ maxWidth: '125px' }}>{sessiontoken.userData.name}</span> */}
                                         </button>
                                         <ul className="dropdown-menu">
                                             <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
@@ -164,7 +164,7 @@ function Navbarcommon() {
                                     </li>
                                 </ul>
                                 <div className='dropstart'>
-                                    <button className={`${sessiontoken.valid ? 'd-flex' : 'd-none'} ${styles.authenticatedAcc} align-items-center gap-1 rounded-pill p-2 `} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button className={`${sessiontoken.valid ? 'd-flex' : 'd-none'} ${styles.authenticatedAcc} align-items-center gap-1 rounded-pill p-1`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <img src={`${sessiontoken.userData.profileImage ? sessiontoken.userData.profileImage : '/images/default_user.jpg'}`} alt='user' className='rounded-circle' id={styles.userImg} />
                                         <span className='d-inline-block text-truncate' style={{ maxWidth: '125px' }}>{sessiontoken.userData.name}</span>
                                     </button>

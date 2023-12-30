@@ -14,10 +14,17 @@ const jobRoutes = require('./routes/job_routes');
 // Express -- middleware
 app.use(express.json());
 
+// For vercel deployment
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://hireme-nu.vercel.app',
     credentials: true,
   }));
+
+// based on localhost
+// app.use(cors({
+//     origin: 'http://localhost:3000',
+//     credentials: true,
+//   }));
 // session
 // app.use(cookieParser());
 app.use(session({

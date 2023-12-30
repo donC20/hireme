@@ -50,7 +50,7 @@ const Profile = () => {
         {
             label: 'Phone',
             icon: 'bi bi-phone-fill',
-            value: '+91 7306227350',
+            value: sessiontoken?.userData?.phone,
         },
         {
             label: 'Address',
@@ -58,7 +58,45 @@ const Profile = () => {
             value: sessiontoken?.userData?.address,
             isAddress: true,
         },
+        {
+            label: 'Gender',
+            icon: 'bi bi-gender-ambiguous',
+            value: sessiontoken?.userData?.gender,
+            isAddress: true,
+        },
     ];
+
+    // temolate social data
+    const socialData = [
+        {
+            label: 'Github',
+            icon: 'bi bi-github',
+            value: '',
+        },
+        {
+            label: 'LinkedIn ',
+            icon: 'bi bi-linkedin',
+            value: '',
+        },
+        {
+            label: 'Website',
+            icon: 'bi bi-globe2',
+            value: '',
+        },
+
+        {
+            label: 'Facebook',
+            icon: 'bi bi-facebook',
+            value: '',
+        },
+        {
+            label: 'Instagram',
+            icon: 'bi bi-instagram',
+            value: '',
+        },
+
+
+    ]
 
     return (
         <div>
@@ -99,27 +137,19 @@ const Profile = () => {
 
                                 {sessiontoken.valid && sessiontoken.userData ? (
                                     <div>
+                                        {socialData.map((item, index) => (
+                                            <div className={`d-flex justify-content-between align-items-center mb-2`} key={index}>
+                                                <small className='fw-bold text-muted'><i className={`${item.icon} me-2`}></i>{item.label}</small>
+                                                {item.value ? (
+                                                    <Link className='text-muted' to={item.value}><i className="bi bi-arrow-right"></i></Link>
+                                                ) : (
+                                                    <small className='text-muted'>
 
-                                        <div className={`d-flex justify-content-between align-items-center mb-2 ${styles.socialCell}`}>
-                                            <small className='fw-bold text-muted'><i className="bi bi-github me-2"></i>GitHub</small>
-                                            <Link className='text-muted' to={''}><i className="bi bi-arrow-right"></i></Link>
-                                        </div>
-                                        <div className={`d-flex justify-content-between align-items-center mb-2 ${styles.socialCell}`}>
-                                            <small className='fw-bold text-muted'><i className="bi bi-globe2 me-2"></i>Website</small>
-                                            <Link className='text-muted' to={''}><i className="bi bi-arrow-right"></i></Link>
-                                        </div>
-                                        <div className={`d-flex justify-content-between align-items-center mb-2 ${styles.socialCell}`}>
-                                            <small className='fw-bold text-muted'><i className="bi bi-instagram me-2"></i>Instagram</small>
-                                            <Link className='text-muted' to={''}><i className="bi bi-arrow-right"></i></Link>
-                                        </div>
-                                        <div className={`d-flex justify-content-between align-items-center mb-2 ${styles.socialCell}`}>
-                                            <small className='fw-bold text-muted'><i className="bi bi-facebook me-2"></i>Facebook</small>
-                                            <Link className='text-muted' to={''}><i className="bi bi-arrow-right"></i></Link>
-                                        </div>
-                                        <div className={`d-flex justify-content-between align-items-center mb-2 ${styles.socialCell}`}>
-                                            <small className='fw-bold text-muted'><i className="bi bi-stack me-2"></i>Stakoverflow</small>
-                                            <Link className='text-muted' to={''}><i className="bi bi-arrow-right"></i></Link>
-                                        </div>
+                                                        <small><i class="bi bi-plus-circle-fill"></i></small>
+                                                    </small>
+                                                )}
+                                            </div>
+                                        ))}
                                     </div>
                                 ) : (
                                     <div className="d-flex justify-content-center align-items.center">
@@ -143,16 +173,11 @@ const Profile = () => {
                                                         {section.label}
                                                     </small>
                                                     <small className='text-muted'>
-                                                        {section.isAddress ? (
-                                                            section.value ? (
-                                                                section.value
-                                                            ) : (
-                                                                <button className='btn btn-transparent rounded-pill border'>
-                                                                    <small>Add</small>
-                                                                </button>
-                                                            )
-                                                        ) : (
+                                                        {section.value ? (
                                                             section.value
+                                                        ) : (
+                                                            <small><i class="bi bi-plus-circle-fill"></i></small>
+
                                                         )}
                                                     </small>
                                                 </div>

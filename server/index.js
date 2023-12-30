@@ -42,7 +42,7 @@ app.use(session({
 app.use((req, res, next) => {
     // console.log(req.url, req.method);
     // console.log('session started Hello');
-    res.json({msg:"Hello connected"})   
+    res.json({msg:"Hello connected procceed"})   
     next();
 })
 // routes

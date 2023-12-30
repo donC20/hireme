@@ -15,13 +15,20 @@ const jobRoutes = require('./routes/job_routes');
 app.use(express.json());
 
 // cors
-const origin =
-    process.env.NODE_ENV === 'production'
-        ? 'https://hireme-nu.vercel.app'
-        : 'http://localhost:3000';
+// const origin =
+//     process.env.NODE_ENV === 'production'
+//         ? 'https://hireme-nu.vercel.app'
+//         : 'http://localhost:3000';
+
+// app.use(cors({
+//     origin,
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+// }));
+
 
 app.use(cors({
-    origin,
+    origin: 'https://hireme-nu.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
@@ -45,7 +52,7 @@ app.use(session({
 app.use((req, res, next) => {
     console.log(req.url, req.method);
     console.log('session started Hello');
-    res.send('Yea we are in!')
+    // res.send('Yea we are in!')
     // res.json({msg:"Hello connected"})
     next();
 })

@@ -17,7 +17,7 @@ app.use(express.json());
 // cors
 const origin =
     process.env.NODE_ENV === 'production'
-        ? 'https://hireme-api.vercel.app'
+        ? 'https://hireme-nu.vercel.app'
         : 'http://localhost:3000';
 
 app.use(cors({

@@ -17,7 +17,7 @@ module.exports = function (app) {
   // Assuming that if NODE_ENV is not set, it defaults to 'development'
   const target =
     process.env.NODE_ENV === 'production'
-      ? 'https://hireme-nu.vercel.app'
+      ? 'https://hireme-api.vercel.app'
       : 'http://localhost:3001';
 
   app.use(

@@ -1,5 +1,3 @@
-import { useNavigate } from 'react-router-dom';
-
 // normal session
 export const LoginToJobsSession = async (navigate) => {
     try {
@@ -10,9 +8,9 @@ export const LoginToJobsSession = async (navigate) => {
             },
             credentials: 'include',
         });
-        console.log(response);
 
         if (response.ok) {
+       
             const sessionData = await response.json();
             console.log(sessionData);
             if (sessionData.valid) {

@@ -6,7 +6,6 @@ import LoadingProgress from '../../components/LoadingProgress'
 import style from './css/login.module.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { LoginToJobsSession } from '../../hooks/sessionHooks';
-import FullBodyLoading from '../../components/FullBodyLoading';
 const Login = () => {
     const navigate = useNavigate();
     const [loadingState, setLoadingState] = useState('none');
@@ -14,7 +13,7 @@ const Login = () => {
     // session checking
     useEffect(() => {
         LoginToJobsSession(navigate);
-    }, []);
+    }, [navigate]);
 
     // Toast
     const notify = (toastMessage, status) => {

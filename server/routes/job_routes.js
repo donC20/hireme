@@ -9,8 +9,7 @@ router.get('/session', (req, res) => {
         console.log(req.session.USER_ID);
         res.status(200).json({ valid: true, userID: req.session.USER_ID, userData: req.session.USER_DATA });
     } else {
-        res.status(200).json({ valid: false });
-        console.log(req.session.USER_ID);
+        res.status(200).json({ valid: false, userID: 'unavailable', userData: 'unavailable' });
     }
 })
 

@@ -2,7 +2,6 @@
   "name": "hireme",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://hireme-api.vercel.app",
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.10",

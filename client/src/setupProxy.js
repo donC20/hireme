@@ -2,30 +2,30 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
 // for vercel
-// module.exports = function(app) {
-//   console.log('proxy called');
-//   app.use(
-//     '/api',
-//     createProxyMiddleware({
-//       target: 'https://hireme-api.vercel.app/',
-//       changeOrigin: true,
-//     })
-//   );
-// };
-
-module.exports = function (app) {
+module.exports = function(app) {
   console.log('proxy called');
   app.use(
     '/api',
     createProxyMiddleware({
       target: 'https://hireme-api.vercel.app',
       changeOrigin: true,
-      pathRewrite: {
-        '^/api': '', // remove the /api prefix
-      },
     })
   );
 };
+
+// module.exports = function (app) {
+//   console.log('proxy called');
+//   app.use(
+//     '/api',
+//     createProxyMiddleware({
+//       target: 'https://hireme-api.vercel.app',
+//       changeOrigin: true,
+//       pathRewrite: {
+//         '^/api': '', // remove the /api prefix
+//       },
+//     })
+//   );
+// };
 
 // for localhost
 // module.exports = function (app) {

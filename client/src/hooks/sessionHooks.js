@@ -6,7 +6,6 @@ export const LoginToJobsSession = async (navigate) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            credentials: 'include',
         });
         console.log(response);
         if (response.ok) {
@@ -32,7 +31,6 @@ export const CommonSession = async (navigate) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            credentials: 'include',
         });
 
         if (response.ok) {
@@ -55,7 +53,6 @@ export const SessionValue = async () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            credentials: 'include',
         });
 
         if (response.ok) {
@@ -80,7 +77,6 @@ export const EndLife = async (navigate) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            credentials: 'include',
         });
 
         if (response.ok) {

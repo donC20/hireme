@@ -28,7 +28,7 @@ app.use(express.json());
 
 
 app.use(cors({
-    origin: 'https://hireme-9g2f.onrender.com',
+    origin: 'https://hireme-a0qs.onrender.com',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));

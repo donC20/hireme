@@ -40,24 +40,20 @@ app.use(session({
 
 // Global moddleware
 app.use((req, res, next) => {
-    // console.log(req.url, req.method);
-    // console.log('session started Hello');
-    res.json({msg:"Hello connected procceed"})   
+    console.log(req.url, req.method);
+    console.log('session started Hello');
+    // res.json({msg:"Hello connected"})   
     next();
 })
 // routes
 app.use('/api/jobposts', jobRoutes);
 
 
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
-        const PORT = process.env.PORT;
-        app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`);
-        });
-    })
-    .catch((err) => {
-        console.error('MongoDB connection error:', err);
+mongoose.connect(process.env.MONGO_URI).then(() => {
+    // listen for request
+    const PORT = process.env.PORT;
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
     });
-
+}).catch((err) => { console.log(err) })
 

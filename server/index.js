@@ -40,7 +40,8 @@ app.use(session({
 
 // Global moddleware
 app.use((req, res, next) => {
-    console.log(req.url, req.method);
+    // console.log(req.url, req.method);
+    console.log('session started Hello');
     next();
 })
 // routes

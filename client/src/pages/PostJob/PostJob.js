@@ -55,7 +55,7 @@ const PostJob = () => {
         };
         setLoadingState(true);
         try {
-            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/addPost', {
+            const response = await fetch('https://hireme-api-97hy.onrender.com/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/addPost', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

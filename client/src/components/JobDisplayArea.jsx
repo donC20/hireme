@@ -10,7 +10,7 @@ const JobDisplayArea = () => {
     let [bookmaredItem, setBookmark] = useState([])
     useEffect(() => {
         const fetchJobpostData = async () => {
-            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k')
+            const response = await fetch('https://hireme-api-97hy.onrender.com/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k')
             const json = await response.json()
             if (response.ok) {
                 setJobPostings(json)

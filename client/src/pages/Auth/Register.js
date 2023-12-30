@@ -58,7 +58,7 @@ const Register = () => {
 
         try {
 
-            const response = await fetch('/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/createUser', {
+            const response = await fetch('https://hireme-api-97hy.onrender.com/api/jobposts/JDIEodHDFND93DKW-KJSJJFJKSMs345k/createUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

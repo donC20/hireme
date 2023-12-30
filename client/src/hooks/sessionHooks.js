@@ -1,7 +1,7 @@
 // normal session
 export const LoginToJobsSession = async (navigate) => {
     try {
-        const response = await fetch('/api/jobposts/session', {
+        const response = await fetch('https://hireme-api.vercel.app/api/jobposts/session', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const LoginToJobsSession = async (navigate) => {
 // common session
 export const CommonSession = async (navigate) => {
     try {
-        const response = await fetch('/api/jobposts/session', {
+        const response = await fetch('https://hireme-api.vercel.app/api/jobposts/session', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export const CommonSession = async (navigate) => {
 // common session
 export const SessionValue = async () => {
     try {
-        const response = await fetch('/api/jobposts/session', {
+        const response = await fetch('https://hireme-api.vercel.app/api/jobposts/session', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export const SessionValue = async () => {
 // session destroy
 export const EndLife = async (navigate) => {
     try {
-        const response = await fetch('/api/jobposts/logout', {
+        const response = await fetch('https://hireme-api.vercel.app/api/jobposts/logout', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

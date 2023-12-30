@@ -10,9 +10,11 @@ export const LoginToJobsSession = async (navigate) => {
             },
             credentials: 'include',
         });
+        console.log(response);
 
         if (response.ok) {
             const sessionData = await response.json();
+            console.log(sessionData);
             if (sessionData.valid) {
                 navigate('/jobs', { replace: true });
             }

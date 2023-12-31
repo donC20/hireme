@@ -25,13 +25,23 @@ app.use(express.json());
 //     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 //     credentials: true,
 // }));
-
+const origin =
+    process.env.NODE_ENV === 'production'
+        ? 'https://hireme-a0qs.onrender.com'
+        : 'http://localhost:3000';
 
 app.use(cors({
-    origin: 'https://hireme-a0qs.onrender.com',
+    origin,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
+
+
+// app.use(cors({
+//     origin: 'https://hireme-a0qs.onrender.com,',
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+// }));
 
 
 
